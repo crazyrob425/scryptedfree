@@ -2,5 +2,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-    appsblacklisted_dashboard_lib::run()
+    blacklisted_dashboard_lib::run()
 }
