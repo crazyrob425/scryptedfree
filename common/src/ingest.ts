@@ -65,7 +65,7 @@ export interface IngestConnectionOptions {
   preferredCodecs?: string[];
   /**
    * Request audio alongside video when available.
-   * Defaults to false to minimise bandwidth.
+   * Defaults to false to minimize bandwidth.
    */
   includeAudio?: boolean;
   /** Provider-specific opaque extra parameters. */

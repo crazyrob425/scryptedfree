@@ -137,7 +137,10 @@ export class BlinkCameraDevice extends ScryptedDeviceBase implements Camera {
   }
 
   async takePicture(options?: RequestPictureOptions): Promise<MediaObject> {
-    const jpeg = await this.client.getThumbnailBuffer(this.nativeId!);
+    if (!this.nativeId) {
+      throw new Error('BlinkCameraDevice: nativeId is not set');
+    }
+    const jpeg = await this.client.getThumbnailBuffer(this.nativeId);
     return mediaManager.createMediaObject(jpeg, 'image/jpeg');
   }
 
@@ -148,7 +151,10 @@ export class BlinkCameraDevice extends ScryptedDeviceBase implements Camera {
   async getVideoStream(
     options?: RequestMediaStreamOptions,
   ): Promise<MediaObject> {
-    const liveUrl = await this.client.getLiveUrl(this.nativeId!);
+    if (!this.nativeId) {
+      throw new Error('BlinkCameraDevice: nativeId is not set');
+    }
+    const liveUrl = await this.client.getLiveUrl(this.nativeId);
     return mediaManager.createMediaObject(
       Buffer.from(
         JSON.stringify({ url: liveUrl, container: 'rtsp' }),
