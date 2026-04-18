@@ -186,7 +186,7 @@ class DoorbellMixin
 
 class DoorbellCastController extends ScryptedDeviceBase implements Settings {
   settingsStorage = new StorageSettings(this, {
-    chromcastTargets: {
+    chromecastTargets: {
       title: 'Chromecast / Vizio Display Targets',
       description:
         'Comma-separated list of device names to receive the PiP overlay (must be discovered by the Chromecast plugin first).',
@@ -291,7 +291,7 @@ class PipDoorbellCastPlugin
 
     // Chromecast targets — auto-discovered from the Chromecast plugin.
     const configuredLabels = (
-      (this.controller?.settingsStorage?.values?.chromcastTargets as string) ?? ''
+      (this.controller?.settingsStorage?.values?.chromecastTargets as string) ?? ''
     )
       .split(',')
       .map((s: string) => s.trim().toLowerCase())
