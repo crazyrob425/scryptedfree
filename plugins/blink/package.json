@@ -1,0 +1,36 @@
+{
+  "name": "@scrypted/blink",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Blink camera provider for Scrypted, built on the shared ingest/recording pipeline.",
+  "scripts": {
+    "scrypted-setup-project": "scrypted-setup-project",
+    "prescrypted-setup-project": "scrypted-package-json",
+    "build": "scrypted-webpack",
+    "prepublishOnly": "NODE_ENV=production scrypted-webpack",
+    "scrypted-deploy": "scrypted-deploy"
+  },
+  "keywords": [
+    "scrypted",
+    "plugin",
+    "blink"
+  ],
+  "scrypted": {
+    "name": "Blink Plugin",
+    "type": "DeviceProvider",
+    "interfaces": [
+      "DeviceProvider",
+      "Settings"
+    ],
+    "babel": true,
+    "pluginDependencies": [
+      "@scrypted/prebuffer-mixin",
+      "@scrypted/snapshot"
+    ]
+  },
+  "dependencies": {
+    "@scrypted/common": "file:../../common",
+    "@scrypted/sdk": "^0.3.61",
+    "@types/node": "^18.15.11"
+  }
+}
