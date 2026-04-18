@@ -111,6 +111,8 @@ cd scryptedfree
 ./npm-install.sh
 ```
 
+> Branding is **OVERWATCH**; current repository name remains `scryptedfree` during transition.
+
 ---
 
 ## 🤝 Contributing
