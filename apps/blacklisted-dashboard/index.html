@@ -8,25 +8,6 @@
     <script type="module" src="/src/main.ts" defer></script>
   </head>
   <body>
-    <main class="shell">
-      <img class="brand" src="/src/assets/brand-logo.svg" alt="Blacklisted Binary Labs logo" />
-      <h1>Windows x64 Native Dashboard</h1>
-      <p class="tagline">Installer-ready control panel shell for Phase 1 rollout.</p>
-      <section class="cards" aria-label="Phase 1 status">
-        <article class="card">
-          <h2>Runtime</h2>
-          <p>Tauri 2 + TypeScript + Vite</p>
-        </article>
-        <article class="card">
-          <h2>Installer</h2>
-          <p>MSI + NSIS targets configured for x64 packaging</p>
-        </article>
-        <article class="card">
-          <h2>Next</h2>
-          <p>Onboarding wizard and service connection flow</p>
-        </article>
-      </section>
-      <footer>© <span id="year"></span> Blacklisted Binary Labs</footer>
-    </main>
+    <main id="app" class="shell" aria-live="polite"></main>
   </body>
 </html>
