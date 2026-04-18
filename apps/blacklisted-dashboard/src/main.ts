@@ -124,6 +124,12 @@ async function fetchWithTimeout(url: string, timeoutMs = 3000): Promise<Response
         Accept: "application/json, text/plain;q=0.8, */*;q=0.6",
       },
     });
+  } catch (error) {
+    if (error instanceof DOMException && error.name === "AbortError") {
+      throw new Error(`Request timed out after ${timeoutMs}ms`);
+    }
+
+    throw error;
   } finally {
     window.clearTimeout(timeoutId);
   }
@@ -139,6 +145,8 @@ async function probeSingleBaseUrl(baseUrl: string): Promise<DiscoveryResult> {
       details: "Invalid URL format",
     };
   }
+
+  let lastErrorDetails = "No reachable discovery/config endpoint";
 
   for (const endpoint of DISCOVERY_ENDPOINTS) {
     const target = withSlashPath(normalizedBaseUrl, endpoint);
@@ -162,8 +170,12 @@ async function probeSingleBaseUrl(baseUrl: string): Promise<DiscoveryResult> {
           details: `Reachable (auth required: ${response.status})`,
         };
       }
-    } catch {
-      // continue trying fallback endpoints
+
+      lastErrorDetails = `Endpoint responded ${response.status}`;
+    } catch (error) {
+      if (error instanceof Error) {
+        lastErrorDetails = error.message;
+      }
     }
   }
 
@@ -171,7 +183,7 @@ async function probeSingleBaseUrl(baseUrl: string): Promise<DiscoveryResult> {
     baseUrl: normalizedBaseUrl,
     endpoint: DISCOVERY_ENDPOINTS[0],
     status: "failure",
-    details: "No reachable discovery/config endpoint",
+    details: lastErrorDetails,
   };
 }
 
@@ -239,7 +251,7 @@ function render(): void {
         step === "welcome"
           ? `
           <h2>Welcome</h2>
-          <p>Set up this console to connect with your local Scrypted service and complete the first-run install flow.</p>
+          <p>Set up this console to connect with your local service and complete the first-run install flow.</p>
           <ul>
             <li>Discover local service endpoints</li>
             <li>Validate discovery/config reachability</li>
@@ -412,7 +424,7 @@ function bindHandlers(): void {
       isValidatingConfig = false;
 
       if (validation.status !== "success") {
-        inlineError = "Unable to validate service endpoint. Check URL or service status.";
+        inlineError = `Unable to validate service endpoint: ${validation.details}.`;
         render();
         return;
       }
