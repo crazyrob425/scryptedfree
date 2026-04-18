@@ -239,7 +239,7 @@ function render(): void {
         step === "welcome"
           ? `
           <h2>Welcome</h2>
-          <p>Set up this console to connect with your local Scryptedfree service and complete the first-run install flow.</p>
+          <p>Set up this console to connect with your local Scrypted service and complete the first-run install flow.</p>
           <ul>
             <li>Discover local service endpoints</li>
             <li>Validate discovery/config reachability</li>
