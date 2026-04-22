@@ -106,12 +106,12 @@ When this roadmap lands, subscription-first camera stacks are going to have a ba
 Take back your hardware.
 
 ```bash
-git clone https://github.com/crazyrob425/scryptedfree.git
-cd scryptedfree
+git clone https://github.com/crazyrob425/overwatch.git
+cd overwatch 
 ./npm-install.sh
 ```
 
-> Branding is **OVERWATCH**; current repository name remains `scryptedfree` during transition.
+> Branding and Repository are now both officially known as **OVERWATCH**
 
 ---
 
