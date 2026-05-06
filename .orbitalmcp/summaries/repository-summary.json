@@ -1,0 +1,1819 @@
+{
+  "workspaceRoot": "c:\\Users\\User\\OneDrive\\Documents\\GitHub\\overwatch",
+  "generatedAt": 1778052130116,
+  "structure": {
+    "totalFiles": 2818,
+    "totalDirs": 538,
+    "languages": {
+      ".md": 672,
+      ".sh": 27,
+      ".json": 290,
+      ".yml": 44,
+      ".html": 73,
+      ".svg": 14,
+      ".ts": 1059,
+      ".css": 5,
+      ".rs": 3,
+      ".lock": 1,
+      ".toml": 1,
+      ".png": 21,
+      ".icns": 1,
+      ".ico": 2,
+      ".js": 49,
+      ".mp4": 5,
+      ".jpg": 4,
+      ".development": 1,
+      ".tsx": 17,
+      ".av1": 2,
+      ".rtp": 34,
+      ".env": 1,
+      ".mts": 8,
+      ".txt": 17,
+      ".pem": 4,
+      ".py": 124,
+      ".bin": 103,
+      ".mjs": 2,
+      ".yaml": 3,
+      ".amd": 1,
+      ".full": 1,
+      ".head": 1,
+      ".intel": 1,
+      ".lite": 1,
+      ".local": 1,
+      ".nvidia": 1,
+      ".nvidia-legacy": 1,
+      ".router": 1,
+      ".s6": 1,
+      ".conf": 2,
+      ".service": 4,
+      ".footer": 1,
+      ".header": 1,
+      ".ps1": 1,
+      ".xml": 2,
+      ".ttf": 1,
+      ".amd64": 1,
+      ".arm": 1,
+      ".arm64": 1,
+      ".typed": 1,
+      ".hwaccel": 1,
+      ".multiarch": 1,
+      ".qsv": 1
+    },
+    "topDirectories": [
+      "apps",
+      "common",
+      "docs",
+      "external",
+      "install",
+      "packages",
+      "plugins",
+      "sdk",
+      "server",
+      "sites"
+    ]
+  },
+  "summary": "Repository contains 2818 files across 538 directories.\n\nPrimary languages:\n  .ts: 1059 files\n  .md: 672 files\n  .json: 290 files\n  .py: 124 files\n  .bin: 103 files\n\nMain directories: apps, common, docs, external, install, packages, plugins, sdk, server, sites\n\nKey configuration files:\n  .gitignore - Git ignore rules\n  apps/blacklisted-dashboard/.gitignore - Git ignore rules\n  apps/blacklisted-dashboard/package.json - Node.js project dependencies and scripts\n  apps/blacklisted-dashboard/README.md - Project documentation\n  apps/blacklisted-dashboard/src-tauri/.gitignore - Git ignore rules\n  apps/blacklisted-dashboard/tsconfig.json - TypeScript configuration\n  apps/blacklisted-dashboard/vite.config.ts - Vite build configuration\n  common/.gitignore - Git ignore rules\n  common/package.json - Node.js project dependencies and scripts\n  common/tsconfig.json - TypeScript configuration",
+  "fileTree": "overwatch/\n├── .blackboxrules\n├── .claude/\n│   ├── CLAUDE.md\n│   ├── hooks/\n│   │   └── vexp-guard.sh\n│   ├── settings.json\n│   └── settings.local.json\n├── .dockerignore\n├── .github/\n│   ├── copilot-instructions.md\n│   ├── FUNDING.yml\n│   ├── ISSUE_TEMPLATE/\n│   │   ├── bug_report.md\n│   │   └── config.yml\n│   └── workflows/\n│       ├── build-plugins-changed.yml\n│       ├── build-sdk.yml\n│       ├── docker-common.yml\n│       ├── docker.yml\n│       ├── release.yml\n│       ├── static-sites.yml\n│       └── test.yml\n├── .gitignore\n├── .gitmodules\n├── .mcp.json\n├── apps/\n│   └── blacklisted-dashboard/\n│       ├── .gitignore\n│       ├── index.html\n│       ├── package-lock.json\n│       ├── package.json\n│       ├── README.md\n│       ├── src/\n│       │   ├── assets/\n│       │   ├── main.ts\n│       │   └── styles.css\n│       ├── src-tauri/\n│       │   ├── .gitignore\n│       │   ├── build.rs\n│       │   ├── capabilities/\n│       │   ├── Cargo.lock\n│       │   ├── Cargo.toml\n│       │   ├── icons/\n│       │   ├── src/\n│       │   └── tauri.conf.json\n│       ├── tsconfig.json\n│       └── vite.config.ts\n├── common/\n│   ├── .gitignore\n│   ├── fs/\n│   │   └── @types/\n│   │       ├── node\n│   │       └── sdk/\n│   ├── package-lock.json\n│   ├── package.json\n│   ├── src/\n│   │   ├── activity-timeout.ts\n│   │   ├── async-queue.ts\n│   │   ├── autoconfigure-codecs.ts\n│   │   ├── autoenable-mixin-provider.ts\n│   │   ├── clone-deep.ts\n│   │   ├── credentials-settings.ts\n│   │   ├── deferred.ts\n│   │   ├── devices.ts\n│   │   ├── doorbell-cast.ts\n│   │   ├── eval/\n│   │   │   ├── monaco/\n│   │   │   ├── monaco-libs.ts\n│   │   │   └── scrypted-eval.ts\n│   │   ├── event-schema.ts\n│   │   ├── ffmpeg-hardware-acceleration.ts\n│   │   ├── ffmpeg-helpers.ts\n│   │   ├── ffmpeg-mp4-parser-session.ts\n│   │   ├── http-auth-fetch.ts\n│   │   ├── ingest.ts\n│   │   ├── json.ts\n│   │   ├── listen-cluster.ts\n│   │   ├── media-helpers.ts\n│   │   ├── promise-utils.ts\n│   │   ├── provider-plugin.ts\n│   │   ├── read-stream.ts\n│   │   ├── recording.ts\n│   │   ├── reliability.ts\n│   │   ├── resolution-utils.ts\n│   │   ├── rtc-connect.ts\n│   │   ├── rtc-signaling.ts\n│   │   ├── rtsp-server.ts\n│   │   ├── sdp-utils.ts\n│   │   ├── settings-mixin.ts\n│   │   ├── sleep.ts\n│   │   ├── stream-parser.ts\n│   │   ├── timeline.ts\n│   │   ├── using-holder.ts\n│   │   └── zygote.ts\n│   ├── test/\n│   │   ├── doorbell-cast.test.ts\n│   │   ├── event-schema.test.ts\n│   │   ├── ingest.test.ts\n│   │   ├── recording.test.ts\n│   │   ├── reliability.test.ts\n│   │   └── rtsp-proxy.ts\n│   └── tsconfig.json\n├── docs/\n│   ├── phase4-phase5-rollout-notes.md\n│   └── provider-overlap-matrix.md\n├── external/\n│   ├── .gitignore\n│   ├── ring-client-api/\n│   │   ├── .changeset/\n│   │   │   ├── beige-pianos-double.md\n│   │   │   ├── config.json\n│   │   │   ├── silent-carrots-perform.md\n│   │   │   └── sour-mirrors-know.md\n│   │   ├── .editorconfig\n│   │   ├── .eslintrc.js\n│   │   ├── .github/\n│   │   │   ├── FUNDING.yml\n│   │   │   ├── ISSUE_TEMPLATE/\n│   │   │   └── workflows/\n│   │   ├── .gitignore\n│   │   ├── .ncurc.json\n│   │   ├── .prettierrc\n│   │   ├── LICENSE\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── packages/\n│   │   │   ├── eslint-config-shared/\n│   │   │   ├── examples/\n│   │   │   ├── homebridge-ring/\n│   │   │   ├── homebridge-ui/\n│   │   │   ├── ring-client-api/\n│   │   │   └── tsconfig/\n│   │   ├── README.md\n│   │   ├── tsconfig.json\n│   │   └── turbo.json\n│   ├── unifi-protect/\n│   │   ├── .eslintrc.json\n│   │   ├── .github/\n│   │   │   ├── auto-merge.yml\n│   │   │   ├── dependabot.yml\n│   │   │   ├── ISSUE_TEMPLATE/\n│   │   │   └── workflows/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── docs/\n│   │   │   └── Changelog.md\n│   │   ├── LICENSE.md\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── index.ts\n│   │   │   ├── protect-api-livestream.ts\n│   │   │   ├── protect-api-updates.ts\n│   │   │   ├── protect-api.ts\n│   │   │   ├── protect-logging.ts\n│   │   │   ├── protect-types.ts\n│   │   │   └── settings.ts\n│   │   ├── tsconfig.json\n│   │   └── unifi-protect-logo.svg\n│   └── werift/\n│       ├── .claude/\n│       │   ├── archive/\n│       │   ├── instruction.md\n│       │   ├── memory.md\n│       │   ├── report/\n│       │   └── webrtc-statics-api.md\n│       ├── .clineignore\n│       ├── .gitattributes\n│       ├── .github/\n│       │   ├── ISSUE_TEMPLATE/\n│       │   └── workflows/\n│       ├── .gitignore\n│       ├── assets/\n│       │   └── rtp/\n│       ├── benchmark/\n│       │   ├── datachannel-options.ts\n│       │   ├── datachannel-simple.ts\n│       │   ├── datachannel-size.ts\n│       │   ├── package.json\n│       │   └── README.md\n│       ├── biome.json\n│       ├── CLAUDE.md\n│       ├── credential.template.env\n│       ├── doc/\n│       │   ├── classes/\n│       │   ├── enumerations/\n│       │   ├── functions/\n│       │   ├── globals.md\n│       │   ├── interfaces/\n│       │   ├── README.md\n│       │   ├── type-aliases/\n│       │   └── variables/\n│       ├── e2e/\n│       │   ├── biome.json\n│       │   ├── knip.json\n│       │   ├── package-lock.json\n│       │   ├── package.json\n│       │   ├── server/\n│       │   ├── stop.js\n│       │   ├── tests/\n│       │   ├── tsconfig.json\n│       │   ├── tsconfig.server.json\n│       │   ├── vitest.config.mts\n│       │   └── vitest.firefox.config.mts\n│       ├── examples/\n│       │   ├── benchmark/\n│       │   ├── biome.json\n│       │   ├── certificate/\n│       │   ├── close/\n│       │   ├── dash/\n│       │   ├── datachannel/\n│       │   ├── getStats/\n│       │   ├── google-nest/\n│       │   ├── ice/\n│       │   ├── interop/\n│       │   ├── knip.json\n│       │   ├── mediachannel/\n│       │   ├── package-lock.json\n│       │   ├── package.json\n│       │   ├── playground/\n│       │   ├── ring/\n│       │   ├── save_to_disk/\n│       │   └── util.ts\n│       ├── knip.json\n│       ├── LICENSE\n│       ├── loadtest/\n│       │   ├── package-lock.json\n│       │   ├── package.json\n│       │   ├── src/\n│       │   └── tsconfig.json\n│       ├── NOTICE\n│       ├── package-lock.json\n│       ├── package.json\n│       ├── packages/\n│       │   ├── common/\n│       │   ├── dtls/\n│       │   ├── ice/\n│       │   ├── rtp/\n│       │   ├── sctp/\n│       │   └── webrtc/\n│       ├── README.md\n│       ├── tsconfig.json\n│       ├── vitest.workspace.mjs\n│       └── website/\n│           ├── .gitignore\n│           ├── babel.config.js\n│           ├── blog/\n│           ├── docs/\n│           ├── docusaurus.config.js\n│           ├── i18n/\n│           ├── package.json\n│           ├── README.md\n│           ├── sidebars.js\n│           ├── src/\n│           ├── static/\n│           ├── tsconfig.json\n│           └── typedoc-sidebar.js\n├── install/\n│   ├── config.yaml\n│   ├── docker/\n│   │   ├── docker-build-local.sh\n│   │   ├── docker-build-nvidia.sh\n│   │   ├── docker-build.sh\n│   │   ├── docker-buildx.sh\n│   │   ├── docker-compose-setup.py\n│   │   ├── docker-compose-setup.sh\n│   │   ├── docker-compose.yml\n│   │   ├── Dockerfile\n│   │   ├── Dockerfile.amd\n│   │   ├── Dockerfile.full\n│   │   ├── Dockerfile.HEAD\n│   │   ├── Dockerfile.intel\n│   │   ├── Dockerfile.lite\n│   │   ├── Dockerfile.local\n│   │   ├── Dockerfile.nvidia\n│   │   ├── Dockerfile.nvidia-legacy\n│   │   ├── Dockerfile.router\n│   │   ├── Dockerfile.s6\n│   │   ├── fs/\n│   │   │   └── etc/\n│   │   ├── install-amd-graphics.sh\n│   │   ├── install-intel-graphics.sh\n│   │   ├── install-intel-npu.sh\n│   │   ├── install-intel-oneapi.sh\n│   │   ├── install-nvidia-container-toolkit.sh\n│   │   ├── install-nvidia-graphics-legacy.sh\n│   │   ├── install-nvidia-graphics.sh\n│   │   ├── install-scrypted-docker-compose.sh\n│   │   ├── router/\n│   │   │   ├── 01-scrypted.conf\n│   │   │   ├── scrypted-dhcp-watcher.service\n│   │   │   ├── scrypted-ip-forwarding.service\n│   │   │   ├── scrypted-nftables.service\n│   │   │   └── scrypted.service\n│   │   ├── setup-scrypted-nvr-volume.sh\n│   │   └── template/\n│   │       ├── Dockerfile.full.footer\n│   │       ├── Dockerfile.full.header\n│   │       ├── generate-dockerfile.sh\n│   │       └── warning.sh\n│   ├── icon.png\n│   ├── local/\n│   │   ├── install-scrypted-dependencies-linux.sh\n│   │   ├── install-scrypted-dependencies-mac.sh\n│   │   └── install-scrypted-dependencies-win.ps1\n│   ├── logo.png\n│   └── proxmox/\n│       ├── docker-compose.sh\n│       ├── install-scrypted-proxmox.sh\n│       ├── lxc.png\n│       └── setup-scrypted-nvr-volume.sh\n├── LICENSE.md\n├── npm-install.sh\n├── packages/\n│   ├── auth-fetch/\n│   │   ├── .gitignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── src/\n│   │   │   ├── auth-fetch.ts\n│   │   │   └── index.ts\n│   │   └── tsconfig.json\n│   ├── cli/\n│   │   ├── .gitignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── src/\n│   │   │   ├── main.ts\n│   │   │   ├── rtsp-file.ts\n│   │   │   ├── service.ts\n│   │   │   └── shell.ts\n│   │   └── tsconfig.json\n│   ├── client/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── examples/\n│   │   │   ├── connectRPCObject.ts\n│   │   │   ├── detection.ts\n│   │   │   └── light.ts\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── index.ts\n│   │   │   └── ip.ts\n│   │   └── tsconfig.json\n│   ├── deferred/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── src/\n│   │   │   ├── async-queue.ts\n│   │   │   ├── deferred.ts\n│   │   │   └── index.ts\n│   │   └── tsconfig.json\n│   ├── h264-repacketizer/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── src/\n│   │   │   ├── index.ts\n│   │   │   └── jitter-buffer.ts\n│   │   ├── test/\n│   │   │   └── test.ts\n│   │   └── tsconfig.json\n│   ├── promise/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── src/\n│   │   │   └── index.ts\n│   │   └── tsconfig.json\n│   ├── python-client/\n│   │   ├── .gitignore\n│   │   ├── plugin_remote.py\n│   │   ├── requirements.txt\n│   │   ├── rpc.py\n│   │   ├── rpc_reader.py\n│   │   ├── scrypted_python\n│   │   └── test.py\n│   ├── rpc/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── src/\n│   │   │   ├── index.ts\n│   │   │   ├── rpc-buffer-serializer.ts\n│   │   │   ├── rpc-serializer.ts\n│   │   │   └── rpc.ts\n│   │   └── tsconfig.json\n│   ├── self-signed-certificate/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── src/\n│   │   │   └── index.ts\n│   │   └── tsconfig.json\n│   └── stream-promise/\n│       ├── .gitignore\n│       ├── .npmignore\n│       ├── package-lock.json\n│       ├── package.json\n│       ├── src/\n│       │   └── index.ts\n│       └── tsconfig.json\n├── plugins/\n│   ├── alexa/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── CHANGELOG.md\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── alexa.ts\n│   │   │   ├── common.ts\n│   │   │   ├── handlers.ts\n│   │   │   ├── main.ts\n│   │   │   └── types/\n│   │   └── tsconfig.json\n│   ├── amcrest/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── ad110.md\n│   │   ├── ad410.md\n│   │   ├── dumps/\n│   │   │   ├── amcrest-face-detected.json\n│   │   │   └── amcrest-human-detected.json\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── amcrest-api.ts\n│   │   │   ├── amcrest-configure.ts\n│   │   │   ├── main.ts\n│   │   │   └── probe.ts\n│   │   └── tsconfig.json\n│   ├── blink/\n│   │   ├── package.json\n│   │   ├── src/\n│   │   │   └── main.ts\n│   │   └── tsconfig.json\n│   ├── bticino/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── bticino-aswm-switch.ts\n│   │   │   ├── bticino-camera.ts\n│   │   │   ├── bticino-inviteHandler.ts\n│   │   │   ├── bticino-lock.ts\n│   │   │   ├── bticino-mute-switch.ts\n│   │   │   ├── bticino-voicemailHandler.ts\n│   │   │   ├── c300x-controller-api.ts\n│   │   │   ├── main.ts\n│   │   │   ├── persistent-sip-manager.ts\n│   │   │   ├── sip-helper.ts\n│   │   │   └── storage-settings.ts\n│   │   └── tsconfig.json\n│   ├── chromecast/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── fs/\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   └── main.ts\n│   │   └── tsconfig.json\n│   ├── cloud/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── external/\n│   │   │   └── node-nat-upnp/\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── cloudflared-install.ts\n│   │   │   ├── cloudflared-local-managed.ts\n│   │   │   ├── greenlock.ts\n│   │   │   ├── main.ts\n│   │   │   ├── push.ts\n│   │   │   └── qs.ts\n│   │   ├── test/\n│   │   │   └── test-cloudflared.ts\n│   │   └── tsconfig.json\n│   ├── core/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── fs/\n│   │   │   ├── @types\n│   │   │   └── lxc/\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── aggregate-core.ts\n│   │   │   ├── aggregate.ts\n│   │   │   ├── api/\n│   │   │   ├── automation-actions.ts\n│   │   │   ├── automation.ts\n│   │   │   ├── automations-core.ts\n│   │   │   ├── builtins/\n│   │   │   ├── cluster.ts\n│   │   │   ├── converters.ts\n│   │   │   ├── http-helpers.ts\n│   │   │   ├── launcher-mixin.ts\n│   │   │   ├── main.ts\n│   │   │   ├── media-core.ts\n│   │   │   ├── monaco.ts\n│   │   │   ├── platform/\n│   │   │   ├── plugin-socket-service.ts\n│   │   │   ├── script-core.ts\n│   │   │   ├── script.ts\n│   │   │   ├── scrypted-eval.ts\n│   │   │   ├── terminal-service.ts\n│   │   │   ├── update-plugins.ts\n│   │   │   ├── user.ts\n│   │   │   └── userStorage.ts\n│   │   └── tsconfig.json\n│   ├── coreml/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── common\n│   │   │   ├── coreml/\n│   │   │   ├── detect\n│   │   │   ├── main.py\n│   │   │   ├── predict\n│   │   │   └── requirements.txt\n│   │   └── tsconfig.json\n│   ├── diagnostics/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   └── main.ts\n│   │   └── tsconfig.json\n│   ├── doorbird/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── doorbird-api.ts\n│   │   │   └── main.ts\n│   │   └── tsconfig.json\n│   ├── dummy-switch/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── main.ts\n│   │   │   ├── replace-binary-sensor.ts\n│   │   │   └── replace-motion-sensor.ts\n│   │   └── tsconfig.json\n│   ├── eufy/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── main.ts\n│   │   │   └── stream.ts\n│   │   └── tsconfig.json\n│   ├── ffmpeg-camera/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── common.ts\n│   │   │   └── main.ts\n│   │   └── tsconfig.json\n│   ├── google-device-access/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── fs/\n│   │   │   ├── README-camera-v1.md\n│   │   │   └── README-camera-v2.md\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── pubsub-server/\n│   │   │   ├── .gcloudignore\n│   │   │   ├── .gitignore\n│   │   │   ├── app.yaml\n│   │   │   ├── package-lock.json\n│   │   │   ├── package.json\n│   │   │   ├── src/\n│   │   │   └── tsconfig.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   └── main.ts\n│   │   └── tsconfig.json\n│   ├── google-home/\n│   │   ├── .editorconfig\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── local-sdk-app/\n│   │   │   ├── .gitignore\n│   │   │   ├── .npmignore\n│   │   │   ├── index.html\n│   │   │   ├── index.ts\n│   │   │   ├── package-lock.json\n│   │   │   ├── package.json\n│   │   │   ├── serve.js\n│   │   │   ├── test.ts\n│   │   │   ├── tsconfig.json\n│   │   │   ├── tslint.json\n│   │   │   ├── webpack.config.node.js\n│   │   │   └── webpack.config.web.js\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── commands/\n│   │   │   ├── common.ts\n│   │   │   ├── handlers.ts\n│   │   │   ├── main.ts\n│   │   │   └── types/\n│   │   └── tsconfig.json\n│   ├── gstreamer-camera/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── main.ts\n│   │   │   └── recommend.ts\n│   │   └── tsconfig.json\n│   ├── hikvision/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── alarm-switch.ts\n│   │   │   ├── hikvision-api-capabilities.ts\n│   │   │   ├── hikvision-api-channels.ts\n│   │   │   ├── hikvision-autoconfigure.ts\n│   │   │   ├── hikvision-camera-api.ts\n│   │   │   ├── hikvision-overlay.ts\n│   │   │   ├── hikvision-xml-types.ts\n│   │   │   ├── main.ts\n│   │   │   ├── probe.ts\n│   │   │   └── supplemental-light.ts\n│   │   └── tsconfig.json\n│   ├── hikvision-doorbell/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── event-patterns.txt\n│   │   ├── fs/\n│   │   │   ├── ALERT_README.md\n│   │   │   ├── DOORBELL_README.md\n│   │   │   ├── ENTRY_SENSOR_README.md\n│   │   │   └── LOCK_README.md\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── auth-request.ts\n│   │   │   ├── debug-console.ts\n│   │   │   ├── doorbell-api.ts\n│   │   │   ├── entry-sensor.ts\n│   │   │   ├── http-stream-switcher.ts\n│   │   │   ├── lock.ts\n│   │   │   ├── main.ts\n│   │   │   ├── probe.ts\n│   │   │   ├── rtp-stream-switcher.ts\n│   │   │   ├── sip/\n│   │   │   ├── sip-manager.ts\n│   │   │   ├── tamper-alert.ts\n│   │   │   ├── types.d.ts\n│   │   │   └── utils.ts\n│   │   └── tsconfig.json\n│   ├── homekit/\n│   │   ├── .gitignore\n│   │   ├── .gitmodules\n│   │   ├── .npmignore\n│   │   ├── fs/\n│   │   │   └── silence.mp4\n│   │   ├── notes/\n│   │   │   └── iOS-15.5.md\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── address-override.ts\n│   │   │   ├── battery.ts\n│   │   │   ├── camera-mixin.ts\n│   │   │   ├── common.ts\n│   │   │   ├── hap-utils.ts\n│   │   │   ├── hap.ts\n│   │   │   ├── homekit-mixin.ts\n│   │   │   ├── info.ts\n│   │   │   ├── main.ts\n│   │   │   ├── pincode.ts\n│   │   │   ├── types/\n│   │   │   ├── util.ts\n│   │   │   └── video-clips-provider.ts\n│   │   └── tsconfig.json\n│   ├── mqtt/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── fs/\n│   │   │   ├── @types\n│   │   │   └── examples/\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── api/\n│   │   │   ├── autodiscovery.ts\n│   │   │   ├── color-util.ts\n│   │   │   ├── main.ts\n│   │   │   ├── monaco.ts\n│   │   │   ├── publishable-types.ts\n│   │   │   └── scrypted-eval.ts\n│   │   └── tsconfig.json\n│   ├── nanokvm/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── fs/\n│   │   │   └── black.png\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── main.ts\n│   │   │   └── nanokvm/\n│   │   └── tsconfig.json\n│   ├── ncnn/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── common\n│   │   │   ├── detect\n│   │   │   ├── main.py\n│   │   │   ├── nc/\n│   │   │   ├── predict\n│   │   │   └── requirements.txt\n│   │   └── tsconfig.json\n│   ├── notifier-mixin/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   └── main.ts\n│   │   └── tsconfig.json\n│   ├── objectdetector/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── edit-distance.ts\n│   │   │   ├── ffmpeg-audiosensor.ts\n│   │   │   ├── ffmpeg-videoframes.ts\n│   │   │   ├── main.ts\n│   │   │   ├── polygon.ts\n│   │   │   ├── smart-motionsensor.ts\n│   │   │   └── smart-occupancy-sensor.ts\n│   │   ├── test/\n│   │   │   ├── test.ts\n│   │   │   └── test2.ts\n│   │   └── tsconfig.json\n│   ├── onnx/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── common\n│   │   │   ├── detect\n│   │   │   ├── main.py\n│   │   │   ├── ort/\n│   │   │   ├── predict\n│   │   │   └── requirements.txt\n│   │   └── tsconfig.json\n│   ├── onvif/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── main.ts\n│   │   │   ├── onvif-api.ts\n│   │   │   ├── onvif-configure.ts\n│   │   │   ├── onvif-events.ts\n│   │   │   ├── onvif-intercom.ts\n│   │   │   └── onvif-ptz.ts\n│   │   ├── tsconfig.json\n│   │   └── xml-dumps/\n│   │       └── profiles.xml\n│   ├── opencv/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── detect\n│   │   │   ├── main.py\n│   │   │   ├── opencv/\n│   │   │   └── requirements.txt\n│   │   └── tsconfig.json\n│   ├── openvino/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── common/\n│   │   │   ├── detect/\n│   │   │   ├── main.py\n│   │   │   ├── ov/\n│   │   │   ├── predict/\n│   │   │   └── requirements.txt\n│   │   └── tsconfig.json\n│   ├── pip-doorbell-cast/\n│   │   ├── package.json\n│   │   ├── src/\n│   │   │   ├── chromecast-pip.ts\n│   │   │   ├── fire-tv-cast.ts\n│   │   │   └── main.ts\n│   │   └── tsconfig.json\n│   ├── prebuffer-mixin/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── camera-slash.jpg\n│   │   ├── create-camera-slash-mp4.sh\n│   │   ├── fs/\n│   │   │   └── camera-slash.mp4\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── au.ts\n│   │   │   ├── ffmpeg-rebroadcast.ts\n│   │   │   ├── file-rtsp-server.ts\n│   │   │   ├── flv.ts\n│   │   │   ├── local-addresses.ts\n│   │   │   ├── main.ts\n│   │   │   ├── rebroadcast-mixin-token.ts\n│   │   │   ├── rfc4571.ts\n│   │   │   ├── rtmp-client.ts\n│   │   │   ├── rtmp-session.ts\n│   │   │   ├── rtsp-session.ts\n│   │   │   ├── sps-resolution.ts\n│   │   │   └── stream-settings.ts\n│   │   └── tsconfig.json\n│   ├── python-codecs/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   └── src/\n│   │       ├── generator_common.py\n│   │       ├── gstreamer.py\n│   │       ├── gstreamer_postprocess.py\n│   │       ├── gst_generator.py\n│   │       ├── libav.py\n│   │       ├── main.py\n│   │       ├── pilimage.py\n│   │       ├── requirements.optional.txt\n│   │       ├── requirements.txt\n│   │       ├── thread.py\n│   │       ├── util.py\n│   │       ├── vipsimage.py\n│   │       └── zygote.py\n│   ├── remote/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   └── main.ts\n│   │   └── tsconfig.json\n│   ├── reolink/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── main.ts\n│   │   │   ├── nvr/\n│   │   │   ├── onvif-api.ts\n│   │   │   ├── onvif-events.ts\n│   │   │   ├── onvif-intercom.ts\n│   │   │   ├── probe.ts\n│   │   │   └── reolink-api.ts\n│   │   └── tsconfig.json\n│   ├── ring/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── camera.ts\n│   │   │   ├── location.ts\n│   │   │   ├── main.ts\n│   │   │   ├── ring-client-api.ts\n│   │   │   └── srtp-utils.ts\n│   │   └── tsconfig.json\n│   ├── rknn/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── common\n│   │   │   ├── detect\n│   │   │   ├── det_utils/\n│   │   │   ├── main.py\n│   │   │   ├── predict\n│   │   │   ├── rec_utils/\n│   │   │   ├── requirements.txt\n│   │   │   └── rknn/\n│   │   └── tsconfig.json\n│   ├── rtsp/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── main.ts\n│   │   │   └── rtsp.ts\n│   │   └── tsconfig.json\n│   ├── sample-cameraprovider/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── CHANGELOG.md\n│   │   ├── fs/\n│   │   │   ├── dog.jpg\n│   │   │   ├── dog.mp4\n│   │   │   └── people.mp4\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   └── main.ts\n│   │   └── tsconfig.json\n│   ├── sip/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── compositeSipMessageHandler.ts\n│   │   │   ├── main.ts\n│   │   │   ├── port-utils.ts\n│   │   │   ├── rtp-utils.ts\n│   │   │   ├── sip-call-session.ts\n│   │   │   ├── sip-manager.ts\n│   │   │   ├── subscribed.ts\n│   │   │   └── util.ts\n│   │   └── tsconfig.json\n│   ├── smtp/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   └── main.ts\n│   │   └── tsconfig.json\n│   ├── snapshot/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── fs/\n│   │   │   └── Lato-Bold.ttf\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── ffmpeg-image-filter.ts\n│   │   │   ├── image-converter.ts\n│   │   │   ├── image-reader.ts\n│   │   │   ├── image-writer.ts\n│   │   │   ├── main.ts\n│   │   │   ├── parse-dims.ts\n│   │   │   └── pipe2jpeg.ts\n│   │   ├── test/\n│   │   │   └── test.ts\n│   │   └── tsconfig.json\n│   ├── synology-ss/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── api/\n│   │   │   └── main.ts\n│   │   └── tsconfig.json\n│   ├── tapo/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── digest-auth.ts\n│   │   │   ├── main.ts\n│   │   │   ├── mpegts-writer.ts\n│   │   │   └── tapo-api.ts\n│   │   ├── test/\n│   │   │   └── test-twoway.ts\n│   │   └── tsconfig.json\n│   ├── tensorflow-lite/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── common\n│   │   │   ├── detect\n│   │   │   ├── main.py\n│   │   │   ├── predict\n│   │   │   ├── requirements.txt\n│   │   │   └── tflite/\n│   │   └── tsconfig.json\n│   ├── tuya/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── CHANGELOG.md\n│   │   ├── Development.md\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── accessories/\n│   │   │   ├── main.ts\n│   │   │   ├── plugin.ts\n│   │   │   └── tuya/\n│   │   └── tsconfig.json\n│   ├── unifi-protect/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── camera-sensors.ts\n│   │   │   ├── camera.ts\n│   │   │   ├── light.ts\n│   │   │   ├── lock.ts\n│   │   │   ├── main.ts\n│   │   │   ├── sensor.ts\n│   │   │   ├── shim.ts\n│   │   │   └── unifi-protect.ts\n│   │   └── tsconfig.json\n│   ├── vscode-python/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── main.py\n│   │   │   └── requirements.example.txt\n│   │   └── tsconfig.json\n│   ├── vscode-typescript/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   └── main.ts\n│   │   └── tsconfig.json\n│   ├── webhook/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   └── main.ts\n│   │   └── tsconfig.json\n│   ├── webrtc/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── ffmpeg-to-wrtc.ts\n│   │   │   ├── h265-packetizer.ts\n│   │   │   ├── ice-servers.ts\n│   │   │   ├── main.ts\n│   │   │   ├── peerconnection-util.ts\n│   │   │   ├── rtp-forwarders.ts\n│   │   │   ├── session-control.ts\n│   │   │   ├── webrtc-camera.ts\n│   │   │   ├── webrtc-required-codecs.ts\n│   │   │   ├── werift-signaling-session.ts\n│   │   │   ├── werift-util.ts\n│   │   │   ├── werift.ts\n│   │   │   └── wrtc-to-rtsp.ts\n│   │   └── tsconfig.json\n│   ├── wyze/\n│   │   ├── .devcontainer/\n│   │   │   └── devcontainer.json\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── docker-wyze-bridge/\n│   │   │   ├── .github/\n│   │   │   ├── .gitignore\n│   │   │   ├── app/\n│   │   │   ├── docker/\n│   │   │   ├── docker-compose.ovpn.yml\n│   │   │   ├── docker-compose.sample.yml\n│   │   │   ├── home_assistant/\n│   │   │   ├── README.md\n│   │   │   ├── repository.json\n│   │   │   └── unraid/\n│   │   ├── fs/\n│   │   │   └── device_config.json\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── README.md\n│   │   ├── src/\n│   │   │   ├── main.py\n│   │   │   ├── requirements.txt\n│   │   │   └── wyzecam\n│   │   └── tsconfig.json\n│   └── zwave/\n│       ├── .gitignore\n│       ├── .npmignore\n│       ├── package-lock.json\n│       ├── package.json\n│       ├── README.md\n│       ├── src/\n│       │   ├── CommandClasses/\n│       │   ├── hex.ts\n│       │   ├── main.ts\n│       │   └── Types.ts\n│       └── tsconfig.json\n├── README.md\n├── repository.yaml\n├── roadmap-blueprint.md\n├── sdk/\n│   ├── .gitignore\n│   ├── .npmignore\n│   ├── bin/\n│   │   └── cli.js\n│   ├── package-lock.json\n│   ├── package.json\n│   ├── polyfill/\n│   │   ├── admzip.js\n│   │   ├── fakefs.js\n│   │   ├── level.js\n│   │   ├── mdns.js\n│   │   ├── memfs.js\n│   │   ├── nodeforge.js\n│   │   ├── realfs.js\n│   │   ├── scryptednodepty.js\n│   │   ├── sharp.js\n│   │   ├── sourcemapsupportregister.js\n│   │   └── typescript.js\n│   ├── README.md\n│   ├── rollup.nodejs.config.mjs\n│   ├── src/\n│   │   ├── acl.ts\n│   │   ├── bin/\n│   │   │   ├── index.ts\n│   │   │   ├── scrypted-changelog.ts\n│   │   │   ├── scrypted-debug.ts\n│   │   │   ├── scrypted-deploy-debug.ts\n│   │   │   ├── scrypted-deploy.ts\n│   │   │   ├── scrypted-package-json.ts\n│   │   │   ├── scrypted-setup-project.ts\n│   │   │   └── scrypted-webpack.ts\n│   │   ├── index.ts\n│   │   ├── promise-debounce.ts\n│   │   ├── settings-mixin.ts\n│   │   └── storage-settings.ts\n│   ├── tsconfig.json\n│   ├── tsconfig.plugin.json\n│   ├── types/\n│   │   ├── .gitignore\n│   │   ├── .npmignore\n│   │   ├── package-lock.json\n│   │   ├── package.json\n│   │   ├── scrypted_python/\n│   │   │   └── scrypted_sdk/\n│   │   ├── src/\n│   │   │   ├── build.ts\n│   │   │   ├── mcp.ts\n│   │   │   ├── tsconfig.json\n│   │   │   └── types.input.ts\n│   │   ├── tsconfig.json\n│   │   ├── tsconfig.typedoc.json\n│   │   └── typedoc.json\n│   └── webpack.nodejs.config.js\n├── server/\n│   ├── .gitignore\n│   ├── .npmignore\n│   ├── bin/\n│   │   ├── packaged-python.d.ts\n│   │   ├── packaged-python.js\n│   │   ├── postinstall\n│   │   └── scrypted-serve\n│   ├── package-lock.json\n│   ├── package.json\n│   ├── python/\n│   │   ├── .gitignore\n│   │   ├── cluster_labels.py\n│   │   ├── cluster_setup.py\n│   │   ├── plugin_console.py\n│   │   ├── plugin_pip.py\n│   │   ├── plugin_remote.py\n│   │   ├── plugin_repl.py\n│   │   ├── plugin_volume.py\n│   │   ├── rpc-iterator-test.py\n│   │   ├── rpc.py\n│   │   └── rpc_reader.py\n│   ├── scripts/\n│   │   ├── github-workflow-publish-docker.sh\n│   │   └── print-package-json-version.js\n│   ├── src/\n│   │   ├── cert.ts\n│   │   ├── cluster/\n│   │   │   ├── cluster-hash.ts\n│   │   │   ├── cluster-labels.ts\n│   │   │   ├── cluster-setup.ts\n│   │   │   └── connect-rpc-object.ts\n│   │   ├── db-types.ts\n│   │   ├── deferred.ts\n│   │   ├── event-registry.ts\n│   │   ├── fetch/\n│   │   │   ├── http-fetch.ts\n│   │   │   └── index.ts\n│   │   ├── http-interfaces.ts\n│   │   ├── infer-defaults.ts\n│   │   ├── io.ts\n│   │   ├── ip.ts\n│   │   ├── level.ts\n│   │   ├── listen-zero.ts\n│   │   ├── logger.ts\n│   │   ├── media-helpers.ts\n│   │   ├── mixin/\n│   │   │   └── mixin-cycle.ts\n│   │   ├── plugin/\n│   │   │   ├── acl.ts\n│   │   │   ├── cluster.ts\n│   │   │   ├── descriptor.ts\n│   │   │   ├── device.ts\n│   │   │   ├── endpoint.ts\n│   │   │   ├── ffmpeg-path.ts\n│   │   │   ├── media.ts\n│   │   │   ├── mediaobject.ts\n│   │   │   ├── plugin-api.ts\n│   │   │   ├── plugin-console.ts\n│   │   │   ├── plugin-debug.ts\n│   │   │   ├── plugin-device.ts\n│   │   │   ├── plugin-error.ts\n│   │   │   ├── plugin-host-api.ts\n│   │   │   ├── plugin-host.ts\n│   │   │   ├── plugin-http.ts\n│   │   │   ├── plugin-lazy-remote.ts\n│   │   │   ├── plugin-npm-dependencies.ts\n│   │   │   ├── plugin-remote-websocket.ts\n│   │   │   ├── plugin-remote-worker.ts\n│   │   │   ├── plugin-remote.ts\n│   │   │   ├── plugin-repl.ts\n│   │   │   ├── plugin-state-check.ts\n│   │   │   ├── plugin-volume.ts\n│   │   │   ├── runtime/\n│   │   │   ├── socket-serializer.ts\n│   │   │   └── system.ts\n│   │   ├── promise-utils.ts\n│   │   ├── rpc-buffer-serializer.ts\n│   │   ├── rpc-peer-eval.ts\n│   │   ├── rpc-serializer.ts\n│   │   ├── rpc.ts\n│   │   ├── runtime.ts\n│   │   ├── scrypted-cluster-main.ts\n│   │   ├── scrypted-main-exports.ts\n│   │   ├── scrypted-main.ts\n│   │   ├── scrypted-plugin-main.ts\n│   │   ├── scrypted-server-main.ts\n│   │   ├── server-settings.ts\n│   │   ├── services/\n│   │   │   ├── addresses.ts\n│   │   │   ├── alerts.ts\n│   │   │   ├── backup.ts\n│   │   │   ├── cluster-fork.ts\n│   │   │   ├── cors.ts\n│   │   │   ├── env.ts\n│   │   │   ├── info.ts\n│   │   │   ├── plugin.ts\n│   │   │   ├── service-control.ts\n│   │   │   └── users.ts\n│   │   ├── sleep.ts\n│   │   ├── state.ts\n│   │   ├── threading.ts\n│   │   └── usertoken.ts\n│   ├── test/\n│   │   ├── check-build-output.js\n│   │   ├── rpc-buffer-array-test.ts\n│   │   ├── rpc-duplex-test.ts\n│   │   ├── rpc-iterator-test.ts\n│   │   ├── rpc-proxy-set.ts\n│   │   ├── rpc-python-test.ts\n│   │   ├── test-cert.json\n│   │   └── threading-test.ts\n│   ├── tsconfig.json\n│   └── volume/\n│       └── .gitignore\n├── sites/\n│   └── static/\n│       ├── google-cast-receiver/\n│       │   ├── .gitignore\n│       │   ├── engine.io.min.js\n│       │   ├── index.html\n│       │   ├── js/\n│       │   ├── package-lock.json\n│       │   ├── package.json\n│       │   ├── src/\n│       │   └── tsconfig.json\n│       └── google-home-local-sdk-app/\n│           ├── node/\n│           └── web/\n└── todo.md",
+  "keyFiles": [
+    {
+      "path": ".gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "apps/blacklisted-dashboard/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "apps/blacklisted-dashboard/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "apps/blacklisted-dashboard/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "apps/blacklisted-dashboard/src-tauri/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "apps/blacklisted-dashboard/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "apps/blacklisted-dashboard/vite.config.ts",
+      "type": "config",
+      "purpose": "Vite build configuration"
+    },
+    {
+      "path": "common/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "common/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "common/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "external/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "external/ring-client-api/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "external/ring-client-api/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/ring-client-api/packages/eslint-config-shared/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/ring-client-api/packages/examples/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "external/ring-client-api/packages/examples/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/ring-client-api/packages/examples/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "external/ring-client-api/packages/homebridge-ring/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/ring-client-api/packages/homebridge-ring/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "external/ring-client-api/packages/homebridge-ring/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "external/ring-client-api/packages/homebridge-ui/.env.development",
+      "type": "config",
+      "purpose": "Environment variables"
+    },
+    {
+      "path": "external/ring-client-api/packages/homebridge-ui/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "external/ring-client-api/packages/homebridge-ui/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/ring-client-api/packages/homebridge-ui/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "external/ring-client-api/packages/ring-client-api/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/ring-client-api/packages/ring-client-api/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "external/ring-client-api/packages/ring-client-api/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "external/ring-client-api/packages/tsconfig/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/ring-client-api/packages/tsconfig/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "external/ring-client-api/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "external/ring-client-api/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "external/unifi-protect/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "external/unifi-protect/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/unifi-protect/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "external/unifi-protect/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "external/werift/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "external/werift/benchmark/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/werift/benchmark/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "external/werift/doc/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "external/werift/e2e/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/werift/e2e/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "external/werift/examples/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/werift/loadtest/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/werift/loadtest/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "external/werift/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/werift/packages/common/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/werift/packages/common/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "external/werift/packages/dtls/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/werift/packages/dtls/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "external/werift/packages/dtls/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "external/werift/packages/ice/doc/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "external/werift/packages/ice/docker/pion-turn/docker-compose.yml",
+      "type": "config",
+      "purpose": "Docker orchestration"
+    },
+    {
+      "path": "external/werift/packages/ice/docker/pion-turn/Dockerfile",
+      "type": "config",
+      "purpose": "Docker container definition"
+    },
+    {
+      "path": "external/werift/packages/ice/docker/pion-turn-tcp/docker-compose.yml",
+      "type": "config",
+      "purpose": "Docker orchestration"
+    },
+    {
+      "path": "external/werift/packages/ice/docker/pion-turn-tcp/Dockerfile",
+      "type": "config",
+      "purpose": "Docker container definition"
+    },
+    {
+      "path": "external/werift/packages/ice/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/werift/packages/ice/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "external/werift/packages/ice/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "external/werift/packages/rtp/doc/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "external/werift/packages/rtp/examples/browser/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/werift/packages/rtp/examples/browser/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "external/werift/packages/rtp/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/werift/packages/rtp/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "external/werift/packages/rtp/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "external/werift/packages/sctp/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/werift/packages/sctp/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "external/werift/packages/sctp/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "external/werift/packages/webrtc/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/werift/packages/webrtc/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "external/werift/packages/webrtc/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "external/werift/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "external/werift/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "external/werift/website/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "external/werift/website/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "external/werift/website/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "external/werift/website/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "install/docker/docker-compose-setup.py",
+      "type": "config",
+      "purpose": "Docker orchestration"
+    },
+    {
+      "path": "install/docker/docker-compose-setup.sh",
+      "type": "config",
+      "purpose": "Docker orchestration"
+    },
+    {
+      "path": "install/docker/docker-compose.yml",
+      "type": "config",
+      "purpose": "Docker orchestration"
+    },
+    {
+      "path": "install/docker/Dockerfile",
+      "type": "config",
+      "purpose": "Docker container definition"
+    },
+    {
+      "path": "install/proxmox/docker-compose.sh",
+      "type": "config",
+      "purpose": "Docker orchestration"
+    },
+    {
+      "path": "packages/auth-fetch/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "packages/auth-fetch/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "packages/auth-fetch/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "packages/cli/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "packages/cli/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "packages/cli/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "packages/client/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "packages/client/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "packages/client/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "packages/client/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "packages/deferred/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "packages/deferred/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "packages/deferred/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "packages/h264-repacketizer/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "packages/h264-repacketizer/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "packages/h264-repacketizer/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "packages/promise/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "packages/promise/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "packages/promise/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "packages/python-client/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "packages/rpc/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "packages/rpc/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "packages/rpc/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "packages/self-signed-certificate/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "packages/self-signed-certificate/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "packages/self-signed-certificate/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "packages/stream-promise/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "packages/stream-promise/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "packages/stream-promise/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/alexa/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/alexa/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/alexa/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/alexa/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/amcrest/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/amcrest/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/amcrest/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/amcrest/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/blink/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/blink/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/bticino/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/bticino/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/bticino/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/bticino/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/chromecast/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/chromecast/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/chromecast/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/chromecast/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/cloud/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/cloud/external/node-nat-upnp/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/cloud/external/node-nat-upnp/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/cloud/external/node-nat-upnp/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/cloud/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/cloud/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/cloud/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/core/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/core/fs/lxc/docker-compose.sh",
+      "type": "config",
+      "purpose": "Docker orchestration"
+    },
+    {
+      "path": "plugins/core/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/core/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/core/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/coreml/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/coreml/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/coreml/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/coreml/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/diagnostics/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/diagnostics/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/diagnostics/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/diagnostics/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/doorbird/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/doorbird/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/doorbird/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/doorbird/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/dummy-switch/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/dummy-switch/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/dummy-switch/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/dummy-switch/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/eufy/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/eufy/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/eufy/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/eufy/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/ffmpeg-camera/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/ffmpeg-camera/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/ffmpeg-camera/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/ffmpeg-camera/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/google-device-access/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/google-device-access/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/google-device-access/pubsub-server/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/google-device-access/pubsub-server/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/google-device-access/pubsub-server/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/google-device-access/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/google-device-access/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/google-home/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/google-home/local-sdk-app/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/google-home/local-sdk-app/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/google-home/local-sdk-app/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/google-home/local-sdk-app/webpack.config.node.js",
+      "type": "config",
+      "purpose": "Webpack bundler configuration"
+    },
+    {
+      "path": "plugins/google-home/local-sdk-app/webpack.config.web.js",
+      "type": "config",
+      "purpose": "Webpack bundler configuration"
+    },
+    {
+      "path": "plugins/google-home/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/google-home/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/google-home/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/gstreamer-camera/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/gstreamer-camera/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/gstreamer-camera/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/gstreamer-camera/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/hikvision/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/hikvision/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/hikvision/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/hikvision/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/hikvision-doorbell/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/hikvision-doorbell/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/hikvision-doorbell/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/hikvision-doorbell/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/homekit/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/homekit/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/homekit/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/homekit/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/mqtt/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/mqtt/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/mqtt/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/mqtt/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/nanokvm/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/nanokvm/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/nanokvm/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/nanokvm/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/ncnn/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/ncnn/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/ncnn/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/ncnn/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/notifier-mixin/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/notifier-mixin/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/notifier-mixin/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/notifier-mixin/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/objectdetector/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/objectdetector/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/objectdetector/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/objectdetector/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/onnx/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/onnx/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/onnx/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/onnx/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/onvif/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/onvif/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/onvif/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/onvif/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/opencv/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/opencv/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/opencv/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/opencv/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/openvino/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/openvino/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/openvino/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/openvino/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/pip-doorbell-cast/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/pip-doorbell-cast/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/prebuffer-mixin/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/prebuffer-mixin/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/prebuffer-mixin/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/prebuffer-mixin/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/python-codecs/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/python-codecs/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/python-codecs/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/remote/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/remote/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/remote/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/remote/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/reolink/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/reolink/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/reolink/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/reolink/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/ring/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/ring/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/ring/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/ring/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/rknn/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/rknn/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/rknn/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/rknn/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/rtsp/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/rtsp/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/rtsp/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/rtsp/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/sample-cameraprovider/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/sample-cameraprovider/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/sample-cameraprovider/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/sample-cameraprovider/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/sip/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/sip/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/sip/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/sip/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/smtp/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/smtp/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/smtp/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/smtp/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/snapshot/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/snapshot/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/snapshot/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/snapshot/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/synology-ss/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/synology-ss/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/synology-ss/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/synology-ss/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/tapo/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/tapo/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/tapo/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/tapo/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/tensorflow-lite/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/tensorflow-lite/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/tensorflow-lite/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/tensorflow-lite/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/tuya/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/tuya/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/tuya/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/tuya/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/unifi-protect/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/unifi-protect/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/unifi-protect/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/unifi-protect/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/vscode-python/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/vscode-python/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/vscode-python/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/vscode-python/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/vscode-typescript/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/vscode-typescript/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/vscode-typescript/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/vscode-typescript/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/webhook/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/webhook/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/webhook/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/webhook/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/webrtc/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/webrtc/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/webrtc/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/webrtc/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/wyze/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/wyze/docker-wyze-bridge/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/wyze/docker-wyze-bridge/app/.env",
+      "type": "config",
+      "purpose": "Environment variables"
+    },
+    {
+      "path": "plugins/wyze/docker-wyze-bridge/docker/Dockerfile",
+      "type": "config",
+      "purpose": "Docker container definition"
+    },
+    {
+      "path": "plugins/wyze/docker-wyze-bridge/docker-compose.ovpn.yml",
+      "type": "config",
+      "purpose": "Docker orchestration"
+    },
+    {
+      "path": "plugins/wyze/docker-wyze-bridge/docker-compose.sample.yml",
+      "type": "config",
+      "purpose": "Docker orchestration"
+    },
+    {
+      "path": "plugins/wyze/docker-wyze-bridge/home_assistant/dev/Dockerfile",
+      "type": "config",
+      "purpose": "Docker container definition"
+    },
+    {
+      "path": "plugins/wyze/docker-wyze-bridge/home_assistant/edge/Dockerfile",
+      "type": "config",
+      "purpose": "Docker container definition"
+    },
+    {
+      "path": "plugins/wyze/docker-wyze-bridge/home_assistant/previous/Dockerfile",
+      "type": "config",
+      "purpose": "Docker container definition"
+    },
+    {
+      "path": "plugins/wyze/docker-wyze-bridge/home_assistant/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/wyze/docker-wyze-bridge/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/wyze/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/wyze/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/wyze/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "plugins/zwave/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "plugins/zwave/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "plugins/zwave/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "plugins/zwave/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "sdk/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "sdk/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "sdk/README.md",
+      "type": "doc",
+      "purpose": "Project documentation"
+    },
+    {
+      "path": "sdk/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "sdk/types/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "sdk/types/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "sdk/types/src/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "sdk/types/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "server/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "server/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "server/python/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "server/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    },
+    {
+      "path": "server/volume/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "sites/static/google-cast-receiver/.gitignore",
+      "type": "config",
+      "purpose": "Git ignore rules"
+    },
+    {
+      "path": "sites/static/google-cast-receiver/package.json",
+      "type": "config",
+      "purpose": "Node.js project dependencies and scripts"
+    },
+    {
+      "path": "sites/static/google-cast-receiver/tsconfig.json",
+      "type": "config",
+      "purpose": "TypeScript configuration"
+    }
+  ]
+}

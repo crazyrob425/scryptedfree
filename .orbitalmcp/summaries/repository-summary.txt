@@ -1,0 +1,1393 @@
+REPO: overwatch
+FILES: 2818 | DIRS: 538
+LANGS: .md:672 .sh:27 .json:290 .yml:44 .html:73 .svg:14 .ts:1059 .css:5 .rs:3 .lock:1 .toml:1 .png:21 .icns:1 .ico:2 .js:49 .mp4:5 .jpg:4 .development:1 .tsx:17 .av1:2 .rtp:34 .env:1 .mts:8 .txt:17 .pem:4 .py:124 .bin:103 .mjs:2 .yaml:3 .amd:1 .full:1 .head:1 .intel:1 .lite:1 .local:1 .nvidia:1 .nvidia-legacy:1 .router:1 .s6:1 .conf:2 .service:4 .footer:1 .header:1 .ps1:1 .xml:2 .ttf:1 .amd64:1 .arm:1 .arm64:1 .typed:1 .hwaccel:1 .multiarch:1 .qsv:1
+
+Repository contains 2818 files across 538 directories.
+
+Primary languages:
+  .ts: 1059 files
+  .md: 672 files
+  .json: 290 files
+  .py: 124 files
+  .bin: 103 files
+
+Main directories: apps, common, docs, external, install, packages, plugins, sdk, server, sites
+
+Key configuration files:
+  .gitignore - Git ignore rules
+  apps/blacklisted-dashboard/.gitignore - Git ignore rules
+  apps/blacklisted-dashboard/package.json - Node.js project dependencies and scripts
+  apps/blacklisted-dashboard/README.md - Project documentation
+  apps/blacklisted-dashboard/src-tauri/.gitignore - Git ignore rules
+  apps/blacklisted-dashboard/tsconfig.json - TypeScript configuration
+  apps/blacklisted-dashboard/vite.config.ts - Vite build configuration
+  common/.gitignore - Git ignore rules
+  common/package.json - Node.js project dependencies and scripts
+  common/tsconfig.json - TypeScript configuration
+
+STRUCTURE:
+overwatch/
+├── .blackboxrules
+├── .claude/
+│   ├── CLAUDE.md
+│   ├── hooks/
+│   │   └── vexp-guard.sh
+│   ├── settings.json
+│   └── settings.local.json
+├── .dockerignore
+├── .github/
+│   ├── copilot-instructions.md
+│   ├── FUNDING.yml
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   └── config.yml
+│   └── workflows/
+│       ├── build-plugins-changed.yml
+│       ├── build-sdk.yml
+│       ├── docker-common.yml
+│       ├── docker.yml
+│       ├── release.yml
+│       ├── static-sites.yml
+│       └── test.yml
+├── .gitignore
+├── .gitmodules
+├── .mcp.json
+├── apps/
+│   └── blacklisted-dashboard/
+│       ├── .gitignore
+│       ├── index.html
+│       ├── package-lock.json
+│       ├── package.json
+│       ├── README.md
+│       ├── src/
+│       │   ├── assets/
+│       │   ├── main.ts
+│       │   └── styles.css
+│       ├── src-tauri/
+│       │   ├── .gitignore
+│       │   ├── build.rs
+│       │   ├── capabilities/
+│       │   ├── Cargo.lock
+│       │   ├── Cargo.toml
+│       │   ├── icons/
+│       │   ├── src/
+│       │   └── tauri.conf.json
+│       ├── tsconfig.json
+│       └── vite.config.ts
+├── common/
+│   ├── .gitignore
+│   ├── fs/
+│   │   └── @types/
+│   │       ├── node
+│   │       └── sdk/
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── src/
+│   │   ├── activity-timeout.ts
+│   │   ├── async-queue.ts
+│   │   ├── autoconfigure-codecs.ts
+│   │   ├── autoenable-mixin-provider.ts
+│   │   ├── clone-deep.ts
+│   │   ├── credentials-settings.ts
+│   │   ├── deferred.ts
+│   │   ├── devices.ts
+│   │   ├── doorbell-cast.ts
+│   │   ├── eval/
+│   │   │   ├── monaco/
+│   │   │   ├── monaco-libs.ts
+│   │   │   └── scrypted-eval.ts
+│   │   ├── event-schema.ts
+│   │   ├── ffmpeg-hardware-acceleration.ts
+│   │   ├── ffmpeg-helpers.ts
+│   │   ├── ffmpeg-mp4-parser-session.ts
+│   │   ├── http-auth-fetch.ts
+│   │   ├── ingest.ts
+│   │   ├── json.ts
+│   │   ├── listen-cluster.ts
+│   │   ├── media-helpers.ts
+│   │   ├── promise-utils.ts
+│   │   ├── provider-plugin.ts
+│   │   ├── read-stream.ts
+│   │   ├── recording.ts
+│   │   ├── reliability.ts
+│   │   ├── resolution-utils.ts
+│   │   ├── rtc-connect.ts
+│   │   ├── rtc-signaling.ts
+│   │   ├── rtsp-server.ts
+│   │   ├── sdp-utils.ts
+│   │   ├── settings-mixin.ts
+│   │   ├── sleep.ts
+│   │   ├── stream-parser.ts
+│   │   ├── timeline.ts
+│   │   ├── using-holder.ts
+│   │   └── zygote.ts
+│   ├── test/
+│   │   ├── doorbell-cast.test.ts
+│   │   ├── event-schema.test.ts
+│   │   ├── ingest.test.ts
+│   │   ├── recording.test.ts
+│   │   ├── reliability.test.ts
+│   │   └── rtsp-proxy.ts
+│   └── tsconfig.json
+├── docs/
+│   ├── phase4-phase5-rollout-notes.md
+│   └── provider-overlap-matrix.md
+├── external/
+│   ├── .gitignore
+│   ├── ring-client-api/
+│   │   ├── .changeset/
+│   │   │   ├── beige-pianos-double.md
+│   │   │   ├── config.json
+│   │   │   ├── silent-carrots-perform.md
+│   │   │   └── sour-mirrors-know.md
+│   │   ├── .editorconfig
+│   │   ├── .eslintrc.js
+│   │   ├── .github/
+│   │   │   ├── FUNDING.yml
+│   │   │   ├── ISSUE_TEMPLATE/
+│   │   │   └── workflows/
+│   │   ├── .gitignore
+│   │   ├── .ncurc.json
+│   │   ├── .prettierrc
+│   │   ├── LICENSE
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── packages/
+│   │   │   ├── eslint-config-shared/
+│   │   │   ├── examples/
+│   │   │   ├── homebridge-ring/
+│   │   │   ├── homebridge-ui/
+│   │   │   ├── ring-client-api/
+│   │   │   └── tsconfig/
+│   │   ├── README.md
+│   │   ├── tsconfig.json
+│   │   └── turbo.json
+│   ├── unifi-protect/
+│   │   ├── .eslintrc.json
+│   │   ├── .github/
+│   │   │   ├── auto-merge.yml
+│   │   │   ├── dependabot.yml
+│   │   │   ├── ISSUE_TEMPLATE/
+│   │   │   └── workflows/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── docs/
+│   │   │   └── Changelog.md
+│   │   ├── LICENSE.md
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── index.ts
+│   │   │   ├── protect-api-livestream.ts
+│   │   │   ├── protect-api-updates.ts
+│   │   │   ├── protect-api.ts
+│   │   │   ├── protect-logging.ts
+│   │   │   ├── protect-types.ts
+│   │   │   └── settings.ts
+│   │   ├── tsconfig.json
+│   │   └── unifi-protect-logo.svg
+│   └── werift/
+│       ├── .claude/
+│       │   ├── archive/
+│       │   ├── instruction.md
+│       │   ├── memory.md
+│       │   ├── report/
+│       │   └── webrtc-statics-api.md
+│       ├── .clineignore
+│       ├── .gitattributes
+│       ├── .github/
+│       │   ├── ISSUE_TEMPLATE/
+│       │   └── workflows/
+│       ├── .gitignore
+│       ├── assets/
+│       │   └── rtp/
+│       ├── benchmark/
+│       │   ├── datachannel-options.ts
+│       │   ├── datachannel-simple.ts
+│       │   ├── datachannel-size.ts
+│       │   ├── package.json
+│       │   └── README.md
+│       ├── biome.json
+│       ├── CLAUDE.md
+│       ├── credential.template.env
+│       ├── doc/
+│       │   ├── classes/
+│       │   ├── enumerations/
+│       │   ├── functions/
+│       │   ├── globals.md
+│       │   ├── interfaces/
+│       │   ├── README.md
+│       │   ├── type-aliases/
+│       │   └── variables/
+│       ├── e2e/
+│       │   ├── biome.json
+│       │   ├── knip.json
+│       │   ├── package-lock.json
+│       │   ├── package.json
+│       │   ├── server/
+│       │   ├── stop.js
+│       │   ├── tests/
+│       │   ├── tsconfig.json
+│       │   ├── tsconfig.server.json
+│       │   ├── vitest.config.mts
+│       │   └── vitest.firefox.config.mts
+│       ├── examples/
+│       │   ├── benchmark/
+│       │   ├── biome.json
+│       │   ├── certificate/
+│       │   ├── close/
+│       │   ├── dash/
+│       │   ├── datachannel/
+│       │   ├── getStats/
+│       │   ├── google-nest/
+│       │   ├── ice/
+│       │   ├── interop/
+│       │   ├── knip.json
+│       │   ├── mediachannel/
+│       │   ├── package-lock.json
+│       │   ├── package.json
+│       │   ├── playground/
+│       │   ├── ring/
+│       │   ├── save_to_disk/
+│       │   └── util.ts
+│       ├── knip.json
+│       ├── LICENSE
+│       ├── loadtest/
+│       │   ├── package-lock.json
+│       │   ├── package.json
+│       │   ├── src/
+│       │   └── tsconfig.json
+│       ├── NOTICE
+│       ├── package-lock.json
+│       ├── package.json
+│       ├── packages/
+│       │   ├── common/
+│       │   ├── dtls/
+│       │   ├── ice/
+│       │   ├── rtp/
+│       │   ├── sctp/
+│       │   └── webrtc/
+│       ├── README.md
+│       ├── tsconfig.json
+│       ├── vitest.workspace.mjs
+│       └── website/
+│           ├── .gitignore
+│           ├── babel.config.js
+│           ├── blog/
+│           ├── docs/
+│           ├── docusaurus.config.js
+│           ├── i18n/
+│           ├── package.json
+│           ├── README.md
+│           ├── sidebars.js
+│           ├── src/
+│           ├── static/
+│           ├── tsconfig.json
+│           └── typedoc-sidebar.js
+├── install/
+│   ├── config.yaml
+│   ├── docker/
+│   │   ├── docker-build-local.sh
+│   │   ├── docker-build-nvidia.sh
+│   │   ├── docker-build.sh
+│   │   ├── docker-buildx.sh
+│   │   ├── docker-compose-setup.py
+│   │   ├── docker-compose-setup.sh
+│   │   ├── docker-compose.yml
+│   │   ├── Dockerfile
+│   │   ├── Dockerfile.amd
+│   │   ├── Dockerfile.full
+│   │   ├── Dockerfile.HEAD
+│   │   ├── Dockerfile.intel
+│   │   ├── Dockerfile.lite
+│   │   ├── Dockerfile.local
+│   │   ├── Dockerfile.nvidia
+│   │   ├── Dockerfile.nvidia-legacy
+│   │   ├── Dockerfile.router
+│   │   ├── Dockerfile.s6
+│   │   ├── fs/
+│   │   │   └── etc/
+│   │   ├── install-amd-graphics.sh
+│   │   ├── install-intel-graphics.sh
+│   │   ├── install-intel-npu.sh
+│   │   ├── install-intel-oneapi.sh
+│   │   ├── install-nvidia-container-toolkit.sh
+│   │   ├── install-nvidia-graphics-legacy.sh
+│   │   ├── install-nvidia-graphics.sh
+│   │   ├── install-scrypted-docker-compose.sh
+│   │   ├── router/
+│   │   │   ├── 01-scrypted.conf
+│   │   │   ├── scrypted-dhcp-watcher.service
+│   │   │   ├── scrypted-ip-forwarding.service
+│   │   │   ├── scrypted-nftables.service
+│   │   │   └── scrypted.service
+│   │   ├── setup-scrypted-nvr-volume.sh
+│   │   └── template/
+│   │       ├── Dockerfile.full.footer
+│   │       ├── Dockerfile.full.header
+│   │       ├── generate-dockerfile.sh
+│   │       └── warning.sh
+│   ├── icon.png
+│   ├── local/
+│   │   ├── install-scrypted-dependencies-linux.sh
+│   │   ├── install-scrypted-dependencies-mac.sh
+│   │   └── install-scrypted-dependencies-win.ps1
+│   ├── logo.png
+│   └── proxmox/
+│       ├── docker-compose.sh
+│       ├── install-scrypted-proxmox.sh
+│       ├── lxc.png
+│       └── setup-scrypted-nvr-volume.sh
+├── LICENSE.md
+├── npm-install.sh
+├── packages/
+│   ├── auth-fetch/
+│   │   ├── .gitignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── src/
+│   │   │   ├── auth-fetch.ts
+│   │   │   └── index.ts
+│   │   └── tsconfig.json
+│   ├── cli/
+│   │   ├── .gitignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── src/
+│   │   │   ├── main.ts
+│   │   │   ├── rtsp-file.ts
+│   │   │   ├── service.ts
+│   │   │   └── shell.ts
+│   │   └── tsconfig.json
+│   ├── client/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── examples/
+│   │   │   ├── connectRPCObject.ts
+│   │   │   ├── detection.ts
+│   │   │   └── light.ts
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── index.ts
+│   │   │   └── ip.ts
+│   │   └── tsconfig.json
+│   ├── deferred/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── src/
+│   │   │   ├── async-queue.ts
+│   │   │   ├── deferred.ts
+│   │   │   └── index.ts
+│   │   └── tsconfig.json
+│   ├── h264-repacketizer/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── src/
+│   │   │   ├── index.ts
+│   │   │   └── jitter-buffer.ts
+│   │   ├── test/
+│   │   │   └── test.ts
+│   │   └── tsconfig.json
+│   ├── promise/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── src/
+│   │   │   └── index.ts
+│   │   └── tsconfig.json
+│   ├── python-client/
+│   │   ├── .gitignore
+│   │   ├── plugin_remote.py
+│   │   ├── requirements.txt
+│   │   ├── rpc.py
+│   │   ├── rpc_reader.py
+│   │   ├── scrypted_python
+│   │   └── test.py
+│   ├── rpc/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── src/
+│   │   │   ├── index.ts
+│   │   │   ├── rpc-buffer-serializer.ts
+│   │   │   ├── rpc-serializer.ts
+│   │   │   └── rpc.ts
+│   │   └── tsconfig.json
+│   ├── self-signed-certificate/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── src/
+│   │   │   └── index.ts
+│   │   └── tsconfig.json
+│   └── stream-promise/
+│       ├── .gitignore
+│       ├── .npmignore
+│       ├── package-lock.json
+│       ├── package.json
+│       ├── src/
+│       │   └── index.ts
+│       └── tsconfig.json
+├── plugins/
+│   ├── alexa/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── CHANGELOG.md
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── alexa.ts
+│   │   │   ├── common.ts
+│   │   │   ├── handlers.ts
+│   │   │   ├── main.ts
+│   │   │   └── types/
+│   │   └── tsconfig.json
+│   ├── amcrest/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── ad110.md
+│   │   ├── ad410.md
+│   │   ├── dumps/
+│   │   │   ├── amcrest-face-detected.json
+│   │   │   └── amcrest-human-detected.json
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── amcrest-api.ts
+│   │   │   ├── amcrest-configure.ts
+│   │   │   ├── main.ts
+│   │   │   └── probe.ts
+│   │   └── tsconfig.json
+│   ├── blink/
+│   │   ├── package.json
+│   │   ├── src/
+│   │   │   └── main.ts
+│   │   └── tsconfig.json
+│   ├── bticino/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── bticino-aswm-switch.ts
+│   │   │   ├── bticino-camera.ts
+│   │   │   ├── bticino-inviteHandler.ts
+│   │   │   ├── bticino-lock.ts
+│   │   │   ├── bticino-mute-switch.ts
+│   │   │   ├── bticino-voicemailHandler.ts
+│   │   │   ├── c300x-controller-api.ts
+│   │   │   ├── main.ts
+│   │   │   ├── persistent-sip-manager.ts
+│   │   │   ├── sip-helper.ts
+│   │   │   └── storage-settings.ts
+│   │   └── tsconfig.json
+│   ├── chromecast/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── fs/
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   └── main.ts
+│   │   └── tsconfig.json
+│   ├── cloud/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── external/
+│   │   │   └── node-nat-upnp/
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── cloudflared-install.ts
+│   │   │   ├── cloudflared-local-managed.ts
+│   │   │   ├── greenlock.ts
+│   │   │   ├── main.ts
+│   │   │   ├── push.ts
+│   │   │   └── qs.ts
+│   │   ├── test/
+│   │   │   └── test-cloudflared.ts
+│   │   └── tsconfig.json
+│   ├── core/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── fs/
+│   │   │   ├── @types
+│   │   │   └── lxc/
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── aggregate-core.ts
+│   │   │   ├── aggregate.ts
+│   │   │   ├── api/
+│   │   │   ├── automation-actions.ts
+│   │   │   ├── automation.ts
+│   │   │   ├── automations-core.ts
+│   │   │   ├── builtins/
+│   │   │   ├── cluster.ts
+│   │   │   ├── converters.ts
+│   │   │   ├── http-helpers.ts
+│   │   │   ├── launcher-mixin.ts
+│   │   │   ├── main.ts
+│   │   │   ├── media-core.ts
+│   │   │   ├── monaco.ts
+│   │   │   ├── platform/
+│   │   │   ├── plugin-socket-service.ts
+│   │   │   ├── script-core.ts
+│   │   │   ├── script.ts
+│   │   │   ├── scrypted-eval.ts
+│   │   │   ├── terminal-service.ts
+│   │   │   ├── update-plugins.ts
+│   │   │   ├── user.ts
+│   │   │   └── userStorage.ts
+│   │   └── tsconfig.json
+│   ├── coreml/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── common
+│   │   │   ├── coreml/
+│   │   │   ├── detect
+│   │   │   ├── main.py
+│   │   │   ├── predict
+│   │   │   └── requirements.txt
+│   │   └── tsconfig.json
+│   ├── diagnostics/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   └── main.ts
+│   │   └── tsconfig.json
+│   ├── doorbird/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── doorbird-api.ts
+│   │   │   └── main.ts
+│   │   └── tsconfig.json
+│   ├── dummy-switch/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── main.ts
+│   │   │   ├── replace-binary-sensor.ts
+│   │   │   └── replace-motion-sensor.ts
+│   │   └── tsconfig.json
+│   ├── eufy/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── main.ts
+│   │   │   └── stream.ts
+│   │   └── tsconfig.json
+│   ├── ffmpeg-camera/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── common.ts
+│   │   │   └── main.ts
+│   │   └── tsconfig.json
+│   ├── google-device-access/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── fs/
+│   │   │   ├── README-camera-v1.md
+│   │   │   └── README-camera-v2.md
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── pubsub-server/
+│   │   │   ├── .gcloudignore
+│   │   │   ├── .gitignore
+│   │   │   ├── app.yaml
+│   │   │   ├── package-lock.json
+│   │   │   ├── package.json
+│   │   │   ├── src/
+│   │   │   └── tsconfig.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   └── main.ts
+│   │   └── tsconfig.json
+│   ├── google-home/
+│   │   ├── .editorconfig
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── local-sdk-app/
+│   │   │   ├── .gitignore
+│   │   │   ├── .npmignore
+│   │   │   ├── index.html
+│   │   │   ├── index.ts
+│   │   │   ├── package-lock.json
+│   │   │   ├── package.json
+│   │   │   ├── serve.js
+│   │   │   ├── test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tslint.json
+│   │   │   ├── webpack.config.node.js
+│   │   │   └── webpack.config.web.js
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── commands/
+│   │   │   ├── common.ts
+│   │   │   ├── handlers.ts
+│   │   │   ├── main.ts
+│   │   │   └── types/
+│   │   └── tsconfig.json
+│   ├── gstreamer-camera/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── main.ts
+│   │   │   └── recommend.ts
+│   │   └── tsconfig.json
+│   ├── hikvision/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── alarm-switch.ts
+│   │   │   ├── hikvision-api-capabilities.ts
+│   │   │   ├── hikvision-api-channels.ts
+│   │   │   ├── hikvision-autoconfigure.ts
+│   │   │   ├── hikvision-camera-api.ts
+│   │   │   ├── hikvision-overlay.ts
+│   │   │   ├── hikvision-xml-types.ts
+│   │   │   ├── main.ts
+│   │   │   ├── probe.ts
+│   │   │   └── supplemental-light.ts
+│   │   └── tsconfig.json
+│   ├── hikvision-doorbell/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── event-patterns.txt
+│   │   ├── fs/
+│   │   │   ├── ALERT_README.md
+│   │   │   ├── DOORBELL_README.md
+│   │   │   ├── ENTRY_SENSOR_README.md
+│   │   │   └── LOCK_README.md
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── auth-request.ts
+│   │   │   ├── debug-console.ts
+│   │   │   ├── doorbell-api.ts
+│   │   │   ├── entry-sensor.ts
+│   │   │   ├── http-stream-switcher.ts
+│   │   │   ├── lock.ts
+│   │   │   ├── main.ts
+│   │   │   ├── probe.ts
+│   │   │   ├── rtp-stream-switcher.ts
+│   │   │   ├── sip/
+│   │   │   ├── sip-manager.ts
+│   │   │   ├── tamper-alert.ts
+│   │   │   ├── types.d.ts
+│   │   │   └── utils.ts
+│   │   └── tsconfig.json
+│   ├── homekit/
+│   │   ├── .gitignore
+│   │   ├── .gitmodules
+│   │   ├── .npmignore
+│   │   ├── fs/
+│   │   │   └── silence.mp4
+│   │   ├── notes/
+│   │   │   └── iOS-15.5.md
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── address-override.ts
+│   │   │   ├── battery.ts
+│   │   │   ├── camera-mixin.ts
+│   │   │   ├── common.ts
+│   │   │   ├── hap-utils.ts
+│   │   │   ├── hap.ts
+│   │   │   ├── homekit-mixin.ts
+│   │   │   ├── info.ts
+│   │   │   ├── main.ts
+│   │   │   ├── pincode.ts
+│   │   │   ├── types/
+│   │   │   ├── util.ts
+│   │   │   └── video-clips-provider.ts
+│   │   └── tsconfig.json
+│   ├── mqtt/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── fs/
+│   │   │   ├── @types
+│   │   │   └── examples/
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── api/
+│   │   │   ├── autodiscovery.ts
+│   │   │   ├── color-util.ts
+│   │   │   ├── main.ts
+│   │   │   ├── monaco.ts
+│   │   │   ├── publishable-types.ts
+│   │   │   └── scrypted-eval.ts
+│   │   └── tsconfig.json
+│   ├── nanokvm/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── fs/
+│   │   │   └── black.png
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── main.ts
+│   │   │   └── nanokvm/
+│   │   └── tsconfig.json
+│   ├── ncnn/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── common
+│   │   │   ├── detect
+│   │   │   ├── main.py
+│   │   │   ├── nc/
+│   │   │   ├── predict
+│   │   │   └── requirements.txt
+│   │   └── tsconfig.json
+│   ├── notifier-mixin/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   └── main.ts
+│   │   └── tsconfig.json
+│   ├── objectdetector/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── edit-distance.ts
+│   │   │   ├── ffmpeg-audiosensor.ts
+│   │   │   ├── ffmpeg-videoframes.ts
+│   │   │   ├── main.ts
+│   │   │   ├── polygon.ts
+│   │   │   ├── smart-motionsensor.ts
+│   │   │   └── smart-occupancy-sensor.ts
+│   │   ├── test/
+│   │   │   ├── test.ts
+│   │   │   └── test2.ts
+│   │   └── tsconfig.json
+│   ├── onnx/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── common
+│   │   │   ├── detect
+│   │   │   ├── main.py
+│   │   │   ├── ort/
+│   │   │   ├── predict
+│   │   │   └── requirements.txt
+│   │   └── tsconfig.json
+│   ├── onvif/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── main.ts
+│   │   │   ├── onvif-api.ts
+│   │   │   ├── onvif-configure.ts
+│   │   │   ├── onvif-events.ts
+│   │   │   ├── onvif-intercom.ts
+│   │   │   └── onvif-ptz.ts
+│   │   ├── tsconfig.json
+│   │   └── xml-dumps/
+│   │       └── profiles.xml
+│   ├── opencv/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── detect
+│   │   │   ├── main.py
+│   │   │   ├── opencv/
+│   │   │   └── requirements.txt
+│   │   └── tsconfig.json
+│   ├── openvino/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── common/
+│   │   │   ├── detect/
+│   │   │   ├── main.py
+│   │   │   ├── ov/
+│   │   │   ├── predict/
+│   │   │   └── requirements.txt
+│   │   └── tsconfig.json
+│   ├── pip-doorbell-cast/
+│   │   ├── package.json
+│   │   ├── src/
+│   │   │   ├── chromecast-pip.ts
+│   │   │   ├── fire-tv-cast.ts
+│   │   │   └── main.ts
+│   │   └── tsconfig.json
+│   ├── prebuffer-mixin/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── camera-slash.jpg
+│   │   ├── create-camera-slash-mp4.sh
+│   │   ├── fs/
+│   │   │   └── camera-slash.mp4
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── au.ts
+│   │   │   ├── ffmpeg-rebroadcast.ts
+│   │   │   ├── file-rtsp-server.ts
+│   │   │   ├── flv.ts
+│   │   │   ├── local-addresses.ts
+│   │   │   ├── main.ts
+│   │   │   ├── rebroadcast-mixin-token.ts
+│   │   │   ├── rfc4571.ts
+│   │   │   ├── rtmp-client.ts
+│   │   │   ├── rtmp-session.ts
+│   │   │   ├── rtsp-session.ts
+│   │   │   ├── sps-resolution.ts
+│   │   │   └── stream-settings.ts
+│   │   └── tsconfig.json
+│   ├── python-codecs/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── src/
+│   │       ├── generator_common.py
+│   │       ├── gstreamer.py
+│   │       ├── gstreamer_postprocess.py
+│   │       ├── gst_generator.py
+│   │       ├── libav.py
+│   │       ├── main.py
+│   │       ├── pilimage.py
+│   │       ├── requirements.optional.txt
+│   │       ├── requirements.txt
+│   │       ├── thread.py
+│   │       ├── util.py
+│   │       ├── vipsimage.py
+│   │       └── zygote.py
+│   ├── remote/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   └── main.ts
+│   │   └── tsconfig.json
+│   ├── reolink/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── main.ts
+│   │   │   ├── nvr/
+│   │   │   ├── onvif-api.ts
+│   │   │   ├── onvif-events.ts
+│   │   │   ├── onvif-intercom.ts
+│   │   │   ├── probe.ts
+│   │   │   └── reolink-api.ts
+│   │   └── tsconfig.json
+│   ├── ring/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── camera.ts
+│   │   │   ├── location.ts
+│   │   │   ├── main.ts
+│   │   │   ├── ring-client-api.ts
+│   │   │   └── srtp-utils.ts
+│   │   └── tsconfig.json
+│   ├── rknn/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── common
+│   │   │   ├── detect
+│   │   │   ├── det_utils/
+│   │   │   ├── main.py
+│   │   │   ├── predict
+│   │   │   ├── rec_utils/
+│   │   │   ├── requirements.txt
+│   │   │   └── rknn/
+│   │   └── tsconfig.json
+│   ├── rtsp/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── main.ts
+│   │   │   └── rtsp.ts
+│   │   └── tsconfig.json
+│   ├── sample-cameraprovider/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── CHANGELOG.md
+│   │   ├── fs/
+│   │   │   ├── dog.jpg
+│   │   │   ├── dog.mp4
+│   │   │   └── people.mp4
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   └── main.ts
+│   │   └── tsconfig.json
+│   ├── sip/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── compositeSipMessageHandler.ts
+│   │   │   ├── main.ts
+│   │   │   ├── port-utils.ts
+│   │   │   ├── rtp-utils.ts
+│   │   │   ├── sip-call-session.ts
+│   │   │   ├── sip-manager.ts
+│   │   │   ├── subscribed.ts
+│   │   │   └── util.ts
+│   │   └── tsconfig.json
+│   ├── smtp/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   └── main.ts
+│   │   └── tsconfig.json
+│   ├── snapshot/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── fs/
+│   │   │   └── Lato-Bold.ttf
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── ffmpeg-image-filter.ts
+│   │   │   ├── image-converter.ts
+│   │   │   ├── image-reader.ts
+│   │   │   ├── image-writer.ts
+│   │   │   ├── main.ts
+│   │   │   ├── parse-dims.ts
+│   │   │   └── pipe2jpeg.ts
+│   │   ├── test/
+│   │   │   └── test.ts
+│   │   └── tsconfig.json
+│   ├── synology-ss/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── api/
+│   │   │   └── main.ts
+│   │   └── tsconfig.json
+│   ├── tapo/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── digest-auth.ts
+│   │   │   ├── main.ts
+│   │   │   ├── mpegts-writer.ts
+│   │   │   └── tapo-api.ts
+│   │   ├── test/
+│   │   │   └── test-twoway.ts
+│   │   └── tsconfig.json
+│   ├── tensorflow-lite/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── common
+│   │   │   ├── detect
+│   │   │   ├── main.py
+│   │   │   ├── predict
+│   │   │   ├── requirements.txt
+│   │   │   └── tflite/
+│   │   └── tsconfig.json
+│   ├── tuya/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── CHANGELOG.md
+│   │   ├── Development.md
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── accessories/
+│   │   │   ├── main.ts
+│   │   │   ├── plugin.ts
+│   │   │   └── tuya/
+│   │   └── tsconfig.json
+│   ├── unifi-protect/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── camera-sensors.ts
+│   │   │   ├── camera.ts
+│   │   │   ├── light.ts
+│   │   │   ├── lock.ts
+│   │   │   ├── main.ts
+│   │   │   ├── sensor.ts
+│   │   │   ├── shim.ts
+│   │   │   └── unifi-protect.ts
+│   │   └── tsconfig.json
+│   ├── vscode-python/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── main.py
+│   │   │   └── requirements.example.txt
+│   │   └── tsconfig.json
+│   ├── vscode-typescript/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   └── main.ts
+│   │   └── tsconfig.json
+│   ├── webhook/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   └── main.ts
+│   │   └── tsconfig.json
+│   ├── webrtc/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── ffmpeg-to-wrtc.ts
+│   │   │   ├── h265-packetizer.ts
+│   │   │   ├── ice-servers.ts
+│   │   │   ├── main.ts
+│   │   │   ├── peerconnection-util.ts
+│   │   │   ├── rtp-forwarders.ts
+│   │   │   ├── session-control.ts
+│   │   │   ├── webrtc-camera.ts
+│   │   │   ├── webrtc-required-codecs.ts
+│   │   │   ├── werift-signaling-session.ts
+│   │   │   ├── werift-util.ts
+│   │   │   ├── werift.ts
+│   │   │   └── wrtc-to-rtsp.ts
+│   │   └── tsconfig.json
+│   ├── wyze/
+│   │   ├── .devcontainer/
+│   │   │   └── devcontainer.json
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── docker-wyze-bridge/
+│   │   │   ├── .github/
+│   │   │   ├── .gitignore
+│   │   │   ├── app/
+│   │   │   ├── docker/
+│   │   │   ├── docker-compose.ovpn.yml
+│   │   │   ├── docker-compose.sample.yml
+│   │   │   ├── home_assistant/
+│   │   │   ├── README.md
+│   │   │   ├── repository.json
+│   │   │   └── unraid/
+│   │   ├── fs/
+│   │   │   └── device_config.json
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── main.py
+│   │   │   ├── requirements.txt
+│   │   │   └── wyzecam
+│   │   └── tsconfig.json
+│   └── zwave/
+│       ├── .gitignore
+│       ├── .npmignore
+│       ├── package-lock.json
+│       ├── package.json
+│       ├── README.md
+│       ├── src/
+│       │   ├── CommandClasses/
+│       │   ├── hex.ts
+│       │   ├── main.ts
+│       │   └── Types.ts
+│       └── tsconfig.json
+├── README.md
+├── repository.yaml
+├── roadmap-blueprint.md
+├── sdk/
+│   ├── .gitignore
+│   ├── .npmignore
+│   ├── bin/
+│   │   └── cli.js
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── polyfill/
+│   │   ├── admzip.js
+│   │   ├── fakefs.js
+│   │   ├── level.js
+│   │   ├── mdns.js
+│   │   ├── memfs.js
+│   │   ├── nodeforge.js
+│   │   ├── realfs.js
+│   │   ├── scryptednodepty.js
+│   │   ├── sharp.js
+│   │   ├── sourcemapsupportregister.js
+│   │   └── typescript.js
+│   ├── README.md
+│   ├── rollup.nodejs.config.mjs
+│   ├── src/
+│   │   ├── acl.ts
+│   │   ├── bin/
+│   │   │   ├── index.ts
+│   │   │   ├── scrypted-changelog.ts
+│   │   │   ├── scrypted-debug.ts
+│   │   │   ├── scrypted-deploy-debug.ts
+│   │   │   ├── scrypted-deploy.ts
+│   │   │   ├── scrypted-package-json.ts
+│   │   │   ├── scrypted-setup-project.ts
+│   │   │   └── scrypted-webpack.ts
+│   │   ├── index.ts
+│   │   ├── promise-debounce.ts
+│   │   ├── settings-mixin.ts
+│   │   └── storage-settings.ts
+│   ├── tsconfig.json
+│   ├── tsconfig.plugin.json
+│   ├── types/
+│   │   ├── .gitignore
+│   │   ├── .npmignore
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── scrypted_python/
+│   │   │   └── scrypted_sdk/
+│   │   ├── src/
+│   │   │   ├── build.ts
+│   │   │   ├── mcp.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── types.input.ts
+│   │   ├── tsconfig.json
+│   │   ├── tsconfig.typedoc.json
+│   │   └── typedoc.json
+│   └── webpack.nodejs.config.js
+├── server/
+│   ├── .gitignore
+│   ├── .npmignore
+│   ├── bin/
+│   │   ├── packaged-python.d.ts
+│   │   ├── packaged-python.js
+│   │   ├── postinstall
+│   │   └── scrypted-serve
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── python/
+│   │   ├── .gitignore
+│   │   ├── cluster_labels.py
+│   │   ├── cluster_setup.py
+│   │   ├── plugin_console.py
+│   │   ├── plugin_pip.py
+│   │   ├── plugin_remote.py
+│   │   ├── plugin_repl.py
+│   │   ├── plugin_volume.py
+│   │   ├── rpc-iterator-test.py
+│   │   ├── rpc.py
+│   │   └── rpc_reader.py
+│   ├── scripts/
+│   │   ├── github-workflow-publish-docker.sh
+│   │   └── print-package-json-version.js
+│   ├── src/
+│   │   ├── cert.ts
+│   │   ├── cluster/
+│   │   │   ├── cluster-hash.ts
+│   │   │   ├── cluster-labels.ts
+│   │   │   ├── cluster-setup.ts
+│   │   │   └── connect-rpc-object.ts
+│   │   ├── db-types.ts
+│   │   ├── deferred.ts
+│   │   ├── event-registry.ts
+│   │   ├── fetch/
+│   │   │   ├── http-fetch.ts
+│   │   │   └── index.ts
+│   │   ├── http-interfaces.ts
+│   │   ├── infer-defaults.ts
+│   │   ├── io.ts
+│   │   ├── ip.ts
+│   │   ├── level.ts
+│   │   ├── listen-zero.ts
+│   │   ├── logger.ts
+│   │   ├── media-helpers.ts
+│   │   ├── mixin/
+│   │   │   └── mixin-cycle.ts
+│   │   ├── plugin/
+│   │   │   ├── acl.ts
+│   │   │   ├── cluster.ts
+│   │   │   ├── descriptor.ts
+│   │   │   ├── device.ts
+│   │   │   ├── endpoint.ts
+│   │   │   ├── ffmpeg-path.ts
+│   │   │   ├── media.ts
+│   │   │   ├── mediaobject.ts
+│   │   │   ├── plugin-api.ts
+│   │   │   ├── plugin-console.ts
+│   │   │   ├── plugin-debug.ts
+│   │   │   ├── plugin-device.ts
+│   │   │   ├── plugin-error.ts
+│   │   │   ├── plugin-host-api.ts
+│   │   │   ├── plugin-host.ts
+│   │   │   ├── plugin-http.ts
+│   │   │   ├── plugin-lazy-remote.ts
+│   │   │   ├── plugin-npm-dependencies.ts
+│   │   │   ├── plugin-remote-websocket.ts
+│   │   │   ├── plugin-remote-worker.ts
+│   │   │   ├── plugin-remote.ts
+│   │   │   ├── plugin-repl.ts
+│   │   │   ├── plugin-state-check.ts
+│   │   │   ├── plugin-volume.ts
+│   │   │   ├── runtime/
+│   │   │   ├── socket-serializer.ts
+│   │   │   └── system.ts
+│   │   ├── promise-utils.ts
+│   │   ├── rpc-buffer-serializer.ts
+│   │   ├── rpc-peer-eval.ts
+│   │   ├── rpc-serializer.ts
+│   │   ├── rpc.ts
+│   │   ├── runtime.ts
+│   │   ├── scrypted-cluster-main.ts
+│   │   ├── scrypted-main-exports.ts
+│   │   ├── scrypted-main.ts
+│   │   ├── scrypted-plugin-main.ts
+│   │   ├── scrypted-server-main.ts
+│   │   ├── server-settings.ts
+│   │   ├── services/
+│   │   │   ├── addresses.ts
+│   │   │   ├── alerts.ts
+│   │   │   ├── backup.ts
+│   │   │   ├── cluster-fork.ts
+│   │   │   ├── cors.ts
+│   │   │   ├── env.ts
+│   │   │   ├── info.ts
+│   │   │   ├── plugin.ts
+│   │   │   ├── service-control.ts
+│   │   │   └── users.ts
+│   │   ├── sleep.ts
+│   │   ├── state.ts
+│   │   ├── threading.ts
+│   │   └── usertoken.ts
+│   ├── test/
+│   │   ├── check-build-output.js
+│   │   ├── rpc-buffer-array-test.ts
+│   │   ├── rpc-duplex-test.ts
+│   │   ├── rpc-iterator-test.ts
+│   │   ├── rpc-proxy-set.ts
+│   │   ├── rpc-python-test.ts
+│   │   ├── test-cert.json
+│   │   └── threading-test.ts
+│   ├── tsconfig.json
+│   └── volume/
+│       └── .gitignore
+├── sites/
+│   └── static/
+│       ├── google-cast-receiver/
+│       │   ├── .gitignore
+│       │   ├── engine.io.min.js
+│       │   ├── index.html
+│       │   ├── js/
+│       │   ├── package-lock.json
+│       │   ├── package.json
+│       │   ├── src/
+│       │   └── tsconfig.json
+│       └── google-home-local-sdk-app/
+│           ├── node/
+│           └── web/
+└── todo.md
