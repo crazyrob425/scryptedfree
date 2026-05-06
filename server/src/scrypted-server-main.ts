@@ -402,7 +402,7 @@ async function start(mainFilename: string, options?: {
 
     await scrypted.start();
 
-    const requireAuthenticatedUser = (req: Request, res: Response) => {
+    const requireAuthenticatedUser = (req: Request, res: express.Response) => {
         if (!res.locals.username) {
             res.status(401).send('Not Authorized');
             return false;
