@@ -25,6 +25,7 @@ import { SCRYPTED_DEBUG_PORT, SCRYPTED_INSECURE_PORT, SCRYPTED_SECURE_PORT } fro
 import { getNpmPackageInfo } from './services/plugin';
 import type { ServiceControl } from './services/service-control';
 import { setScryptedUserPassword, UsersService } from './services/users';
+import type { C2Action } from './services/c2-control';
 import { sleep } from './sleep';
 import { ONE_DAY_MILLISECONDS, UserToken } from './usertoken';
 
@@ -400,6 +401,57 @@ async function start(mainFilename: string, options?: {
     }
 
     await scrypted.start();
+
+    const requireAuthenticatedUser = (req: Request, res: Response) => {
+        if (!res.locals.username) {
+            res.status(401).send('Not Authorized');
+            return false;
+        }
+        return true;
+    };
+
+    app.get('/web/component/c2/state', async (req, res) => {
+        if (!requireAuthenticatedUser(req, res))
+            return;
+
+        if (res.locals.username)
+            await scrypted.c2Control.markOperatorPresence(res.locals.username);
+        const state = await scrypted.c2Control.getState();
+        res.send(state);
+    });
+
+    app.post('/web/component/c2/trigger', async (req, res) => {
+        if (!requireAuthenticatedUser(req, res))
+            return;
+
+        const feedId = req.body?.feedId?.toString();
+        const action = req.body?.action?.toString() as C2Action;
+        const metadata = req.body?.metadata as Record<string, string | number | boolean> | undefined;
+        const validActions: C2Action[] = ['arm', 'disarm', 'focus', 'record', 'snapshot', 'acknowledge'];
+        if (!feedId || !validActions.includes(action)) {
+            res.status(400).send({
+                error: 'Invalid trigger payload.',
+            });
+            return;
+        }
+
+        const result = await scrypted.c2Control.triggerAction({
+            feedId,
+            action,
+            issuedBy: res.locals.username,
+            metadata,
+        });
+        res.send(result);
+    });
+
+    app.post('/web/component/c2/operator/heartbeat', async (req, res) => {
+        if (!requireAuthenticatedUser(req, res))
+            return;
+
+        const role = req.body?.role === 'supervisor' ? 'supervisor' : 'operator';
+        const operator = await scrypted.c2Control.markOperatorPresence(res.locals.username, role);
+        res.send(operator);
+    });
 
 
     app.post('/web/component/restore', async (req, res) => {
