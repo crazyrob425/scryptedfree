@@ -51,7 +51,10 @@ export interface C2State {
     recentTriggers: C2Trigger[];
 }
 
-function makeId(prefix: string) {
+const MAX_RECENT_TRIGGERS = 100;
+const MAX_TACTICAL_SNAPSHOTS = 20;
+
+function generatePrefixedId(prefix: string) {
     return `${prefix}-${crypto.randomUUID()}`;
 }
 
@@ -109,21 +112,21 @@ export class C2Control {
         metadata?: Record<string, string | number | boolean>;
     }) {
         const trigger: C2Trigger = {
-            id: makeId('trigger'),
+            id: generatePrefixedId('trigger'),
             feedId: options.feedId,
             action: options.action,
             issuedAt: Date.now(),
             issuedBy: options.issuedBy,
             metadata: options.metadata,
         };
-        this.recentTriggers = [trigger, ...this.recentTriggers].slice(0, 100);
+        this.recentTriggers = [trigger, ...this.recentTriggers].slice(0, MAX_RECENT_TRIGGERS);
 
         if (options.action === 'snapshot') {
             const feed = this.feeds.get(options.feedId);
             const clips: C2SnapshotClip[] = [];
             if (feed) {
                 clips.push({
-                    id: makeId('clip'),
+                    id: generatePrefixedId('clip'),
                     feedId: feed.id,
                     title: feed.label,
                     previewUrl: feed.streamUrl || '',
@@ -132,12 +135,12 @@ export class C2Control {
                 });
             }
             const snapshot: C2Snapshot = {
-                id: makeId('snapshot'),
+                id: generatePrefixedId('snapshot'),
                 trigger: options.action,
                 createdAt: Date.now(),
                 clips,
             };
-            this.tacticalSnapshots = [snapshot, ...this.tacticalSnapshots].slice(0, 20);
+            this.tacticalSnapshots = [snapshot, ...this.tacticalSnapshots].slice(0, MAX_TACTICAL_SNAPSHOTS);
             return { trigger, snapshot };
         }
 

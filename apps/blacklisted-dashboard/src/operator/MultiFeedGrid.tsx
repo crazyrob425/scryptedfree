@@ -6,6 +6,9 @@ export interface MultiFeedGridProps {
   onFeedCommand: (feedId: string, action: "focus" | "record" | "snapshot") => void;
 }
 
+const DEFAULT_CANVAS_WIDTH = 640;
+const DEFAULT_CANVAS_HEIGHT = 360;
+
 function getGridColumns(feedCount: number): number {
   if (feedCount <= 1) {
     return 1;
@@ -49,7 +52,7 @@ function FeedTile(props: {
             aria-label={`${feed.label} live stream`}
           />
         ) : (
-          <canvas width={640} height={360} />
+          <canvas width={DEFAULT_CANVAS_WIDTH} height={DEFAULT_CANVAS_HEIGHT} />
         )}
       </div>
       <footer className="feed-tile__actions">

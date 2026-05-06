@@ -17,6 +17,7 @@ const FALLBACK_STATE: CommandCenterState = {
   activeFeeds: [],
   tacticalSnapshots: [],
 };
+const STATE_REFRESH_INTERVAL_MS = 2000;
 
 async function fetchState(): Promise<CommandCenterState> {
   const response = await fetch("/web/component/c2/state", {
@@ -72,7 +73,7 @@ function App() {
     };
 
     refresh();
-    const timer = window.setInterval(refresh, 2000);
+    const timer = window.setInterval(refresh, STATE_REFRESH_INTERVAL_MS);
 
     return () => {
       mounted = false;

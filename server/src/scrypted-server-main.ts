@@ -3,6 +3,7 @@ import cookieParser from 'cookie-parser';
 import crypto from 'crypto';
 import { once } from 'events';
 import express, { Request } from 'express';
+import rateLimit from 'express-rate-limit';
 import fs from 'fs';
 import http from 'http';
 import httpAuth from 'http-auth';
@@ -410,34 +411,21 @@ async function start(mainFilename: string, options?: {
         return true;
     };
 
-    const c2RateWindowMs = 10000;
-    const c2RateLimit = 40;
-    const c2RateMap = new Map<string, { startedAt: number, count: number }>();
-    const checkC2RateLimit = (req: Request, res: express.Response) => {
-        const key = `${res.locals.username || 'unknown'}:${req.socket.remoteAddress || 'unknown'}`;
-        const now = Date.now();
-        const bucket = c2RateMap.get(key);
-        if (!bucket || now - bucket.startedAt >= c2RateWindowMs) {
-            c2RateMap.set(key, {
-                startedAt: now,
-                count: 1,
-            });
-            return true;
-        }
-        bucket.count++;
-        if (bucket.count > c2RateLimit) {
+    const c2RateLimiter = rateLimit({
+        windowMs: parseInt(process.env.SCRYPTED_C2_RATE_LIMIT_WINDOW_MS || '10000'),
+        limit: parseInt(process.env.SCRYPTED_C2_RATE_LIMIT_MAX || '40'),
+        standardHeaders: 'draft-8',
+        legacyHeaders: false,
+        keyGenerator: (req, res) => `${res.locals.username || req.ip}`,
+        handler: (_req, res) => {
             res.status(429).send({
                 error: 'Too many C2 requests. Retry shortly.',
             });
-            return false;
-        }
-        return true;
-    };
+        },
+    });
 
-    app.get('/web/component/c2/state', async (req, res) => {
+    app.get('/web/component/c2/state', c2RateLimiter, async (req, res) => {
         if (!requireAuthenticatedUser(req, res))
-            return;
-        if (!checkC2RateLimit(req, res))
             return;
 
         await scrypted.c2Control.markOperatorPresence(res.locals.username);
@@ -445,10 +433,8 @@ async function start(mainFilename: string, options?: {
         res.send(state);
     });
 
-    app.post('/web/component/c2/trigger', async (req, res) => {
+    app.post('/web/component/c2/trigger', c2RateLimiter, async (req, res) => {
         if (!requireAuthenticatedUser(req, res))
-            return;
-        if (!checkC2RateLimit(req, res))
             return;
 
         const feedId = req.body?.feedId?.toString();
@@ -470,10 +456,8 @@ async function start(mainFilename: string, options?: {
         res.send(result);
     });
 
-    app.post('/web/component/c2/operator/heartbeat', async (req, res) => {
+    app.post('/web/component/c2/operator/heartbeat', c2RateLimiter, async (req, res) => {
         if (!requireAuthenticatedUser(req, res))
-            return;
-        if (!checkC2RateLimit(req, res))
             return;
 
         const role = req.body?.role === 'supervisor' ? 'supervisor' : 'operator';
