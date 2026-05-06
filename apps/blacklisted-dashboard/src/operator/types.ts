@@ -18,7 +18,7 @@ export interface OperatorFeed {
   streamUrl?: string;
   codec?: string;
   lastFrameAt?: number;
-  capabilities: StreamCapabilities;
+  capabilities?: StreamCapabilities;
 }
 
 export type C2Action =

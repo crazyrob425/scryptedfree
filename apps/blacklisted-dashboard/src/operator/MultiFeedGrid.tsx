@@ -46,6 +46,7 @@ function FeedTile(props: {
             controls={false}
             src={feed.streamUrl}
             preload="none"
+            aria-label={`${feed.label} live stream`}
           />
         ) : (
           <canvas width={640} height={360} />

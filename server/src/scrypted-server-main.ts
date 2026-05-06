@@ -25,7 +25,7 @@ import { SCRYPTED_DEBUG_PORT, SCRYPTED_INSECURE_PORT, SCRYPTED_SECURE_PORT } fro
 import { getNpmPackageInfo } from './services/plugin';
 import type { ServiceControl } from './services/service-control';
 import { setScryptedUserPassword, UsersService } from './services/users';
-import type { C2Action } from './services/c2-control';
+import { C2_ACTIONS, type C2Action } from './services/c2-control';
 import { sleep } from './sleep';
 import { ONE_DAY_MILLISECONDS, UserToken } from './usertoken';
 
@@ -410,12 +410,37 @@ async function start(mainFilename: string, options?: {
         return true;
     };
 
+    const c2RateWindowMs = 10000;
+    const c2RateLimit = 40;
+    const c2RateMap = new Map<string, { startedAt: number, count: number }>();
+    const checkC2RateLimit = (req: Request, res: express.Response) => {
+        const key = `${res.locals.username || 'unknown'}:${req.socket.remoteAddress || 'unknown'}`;
+        const now = Date.now();
+        const bucket = c2RateMap.get(key);
+        if (!bucket || now - bucket.startedAt >= c2RateWindowMs) {
+            c2RateMap.set(key, {
+                startedAt: now,
+                count: 1,
+            });
+            return true;
+        }
+        bucket.count++;
+        if (bucket.count > c2RateLimit) {
+            res.status(429).send({
+                error: 'Too many C2 requests. Retry shortly.',
+            });
+            return false;
+        }
+        return true;
+    };
+
     app.get('/web/component/c2/state', async (req, res) => {
         if (!requireAuthenticatedUser(req, res))
             return;
+        if (!checkC2RateLimit(req, res))
+            return;
 
-        if (res.locals.username)
-            await scrypted.c2Control.markOperatorPresence(res.locals.username);
+        await scrypted.c2Control.markOperatorPresence(res.locals.username);
         const state = await scrypted.c2Control.getState();
         res.send(state);
     });
@@ -423,12 +448,13 @@ async function start(mainFilename: string, options?: {
     app.post('/web/component/c2/trigger', async (req, res) => {
         if (!requireAuthenticatedUser(req, res))
             return;
+        if (!checkC2RateLimit(req, res))
+            return;
 
         const feedId = req.body?.feedId?.toString();
         const action = req.body?.action?.toString() as C2Action;
         const metadata = req.body?.metadata as Record<string, string | number | boolean> | undefined;
-        const validActions: C2Action[] = ['arm', 'disarm', 'focus', 'record', 'snapshot', 'acknowledge'];
-        if (!feedId || !validActions.includes(action)) {
+        if (!feedId || !C2_ACTIONS.includes(action)) {
             res.status(400).send({
                 error: 'Invalid trigger payload.',
             });
@@ -446,6 +472,8 @@ async function start(mainFilename: string, options?: {
 
     app.post('/web/component/c2/operator/heartbeat', async (req, res) => {
         if (!requireAuthenticatedUser(req, res))
+            return;
+        if (!checkC2RateLimit(req, res))
             return;
 
         const role = req.body?.role === 'supervisor' ? 'supervisor' : 'operator';

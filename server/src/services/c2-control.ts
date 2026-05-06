@@ -1,10 +1,8 @@
+import crypto from 'crypto';
+
+export const C2_ACTIONS = ['arm', 'disarm', 'focus', 'record', 'snapshot', 'acknowledge'] as const;
 export type C2Action =
-    | 'arm'
-    | 'disarm'
-    | 'focus'
-    | 'record'
-    | 'snapshot'
-    | 'acknowledge';
+    (typeof C2_ACTIONS)[number];
 
 export interface C2Trigger {
     id: string;
@@ -54,7 +52,7 @@ export interface C2State {
 }
 
 function makeId(prefix: string) {
-    return `${prefix}-${Math.random().toString(16).slice(2, 10)}-${Date.now().toString(36)}`;
+    return `${prefix}-${crypto.randomUUID()}`;
 }
 
 export class C2Control {

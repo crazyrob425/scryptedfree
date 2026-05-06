@@ -80,17 +80,34 @@ function App() {
     };
   }, []);
 
-  const firstFeedId = useMemo(() => state.activeFeeds[0]?.id ?? "global", [state.activeFeeds]);
+  const firstFeedId = useMemo(() => state.activeFeeds[0]?.id, [state.activeFeeds]);
 
   const handleGlobalCommand = async (action: C2Action) => {
-    await postCommand(action, firstFeedId);
+    if (!firstFeedId) {
+      return;
+    }
+    try {
+      await postCommand(action, firstFeedId);
+      setError("");
+    } catch (e) {
+      if (e instanceof Error) {
+        setError(e.message);
+      }
+    }
   };
 
   const handleFeedCommand = async (
     feedId: string,
     action: "focus" | "record" | "snapshot",
   ) => {
-    await postCommand(action, feedId);
+    try {
+      await postCommand(action, feedId);
+      setError("");
+    } catch (e) {
+      if (e instanceof Error) {
+        setError(e.message);
+      }
+    }
   };
 
   return (

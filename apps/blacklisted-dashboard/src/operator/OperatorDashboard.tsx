@@ -23,7 +23,10 @@ export function OperatorDashboard(props: OperatorDashboardProps) {
       <div className="operator-layout">
         <MultiFeedGrid feeds={state.activeFeeds} onFeedCommand={onFeedCommand} />
         <aside className="operator-sidebar">
-          <CommandPanel onGlobalCommand={onGlobalCommand} />
+          <CommandPanel
+            onGlobalCommand={onGlobalCommand}
+            disabled={!state.activeFeeds.length}
+          />
           <TacticalSnapshotPanel snapshots={state.tacticalSnapshots} />
         </aside>
       </div>
