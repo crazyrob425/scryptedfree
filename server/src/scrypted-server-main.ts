@@ -3,6 +3,7 @@ import cookieParser from 'cookie-parser';
 import crypto from 'crypto';
 import { once } from 'events';
 import express, { Request } from 'express';
+import rateLimit from 'express-rate-limit';
 import fs from 'fs';
 import http from 'http';
 import httpAuth from 'http-auth';
@@ -25,6 +26,7 @@ import { SCRYPTED_DEBUG_PORT, SCRYPTED_INSECURE_PORT, SCRYPTED_SECURE_PORT } fro
 import { getNpmPackageInfo } from './services/plugin';
 import type { ServiceControl } from './services/service-control';
 import { setScryptedUserPassword, UsersService } from './services/users';
+import { C2_ACTIONS, type C2Action } from './services/c2-control';
 import { sleep } from './sleep';
 import { ONE_DAY_MILLISECONDS, UserToken } from './usertoken';
 
@@ -400,6 +402,68 @@ async function start(mainFilename: string, options?: {
     }
 
     await scrypted.start();
+
+    const requireAuthenticatedUser = (req: Request, res: express.Response) => {
+        if (!res.locals.username) {
+            res.status(401).send('Not Authorized');
+            return false;
+        }
+        return true;
+    };
+
+    const c2RateLimiter = rateLimit({
+        windowMs: parseInt(process.env.SCRYPTED_C2_RATE_LIMIT_WINDOW_MS || '10000'),
+        limit: parseInt(process.env.SCRYPTED_C2_RATE_LIMIT_MAX || '40'),
+        standardHeaders: 'draft-8',
+        legacyHeaders: false,
+        keyGenerator: (req, res) => `${res.locals.username || req.ip}`,
+        handler: (_req, res) => {
+            res.status(429).send({
+                error: 'Too many C2 requests. Retry shortly.',
+            });
+        },
+    });
+
+    app.get('/web/component/c2/state', c2RateLimiter, async (req, res) => {
+        if (!requireAuthenticatedUser(req, res))
+            return;
+
+        await scrypted.c2Control.markOperatorPresence(res.locals.username);
+        const state = await scrypted.c2Control.getState();
+        res.send(state);
+    });
+
+    app.post('/web/component/c2/trigger', c2RateLimiter, async (req, res) => {
+        if (!requireAuthenticatedUser(req, res))
+            return;
+
+        const feedId = req.body?.feedId?.toString();
+        const action = req.body?.action?.toString() as C2Action;
+        const metadata = req.body?.metadata as Record<string, string | number | boolean> | undefined;
+        if (!feedId || !C2_ACTIONS.includes(action)) {
+            res.status(400).send({
+                error: 'Invalid trigger payload.',
+            });
+            return;
+        }
+
+        const result = await scrypted.c2Control.triggerAction({
+            feedId,
+            action,
+            issuedBy: res.locals.username,
+            metadata,
+        });
+        res.send(result);
+    });
+
+    app.post('/web/component/c2/operator/heartbeat', c2RateLimiter, async (req, res) => {
+        if (!requireAuthenticatedUser(req, res))
+            return;
+
+        const role = req.body?.role === 'supervisor' ? 'supervisor' : 'operator';
+        const operator = await scrypted.c2Control.markOperatorPresence(res.locals.username, role);
+        res.send(operator);
+    });
 
 
     app.post('/web/component/restore', async (req, res) => {

@@ -40,6 +40,7 @@ import { AddressSettings } from './services/addresses';
 import { Alerts } from './services/alerts';
 import { Backup } from './services/backup';
 import { ClusterForkService } from './services/cluster-fork';
+import { C2Control } from './services/c2-control';
 import { CORSControl } from './services/cors';
 import { EnvControl } from './services/env';
 import { Info } from './services/info';
@@ -92,6 +93,7 @@ export class ScryptedRuntime extends PluginHttp<HttpPluginData> {
     addressSettings = new AddressSettings(this);
     usersService = new UsersService(this);
     clusterFork = new ClusterForkService(this);
+    c2Control = new C2Control();
     envControl = new EnvControl();
     info = new Info();
     backup = new Backup(this);
@@ -363,6 +365,8 @@ export class ScryptedRuntime extends PluginHttp<HttpPluginData> {
                 return this.backup;
             case 'cluster-fork':
                 return this.clusterFork;
+            case 'c2-control':
+                return this.c2Control;
             case 'env-control':
                 return this.envControl;
         }
